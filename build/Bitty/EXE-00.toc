@@ -52,7 +52,7 @@
  [],
  False,
  False,
- 1672621741,
+ 1672632843,
  [('run.exe',
    'C:\\Users\\halvo\\AppData\\Roaming\\Python\\Python39\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')])

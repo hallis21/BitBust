@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 from time import sleep
 from twitchAPI import Twitch
 from twitchAPI.oauth import UserAuthenticator
@@ -13,7 +14,11 @@ import threading
 APP_ID = 'hkcijalj81uknodvvlzs1q5ki5pzov'
 APP_SECRET = '***REMOVED***'
 USER_SCOPE = [AuthScope.CHAT_READ]
-TARGET_CHANNEL = 'sterdekie'
+TARGET_CHANNEL = "sterdekie" #input("Enter channel name: (dont fuck this up) ")
+# print("Is this correct? (y/n) channel: ", TARGET_CHANNEL)
+# if input().lower().strip() != "y":
+#     sys.exit(1) 
+
 
 bust = None
 
@@ -104,7 +109,8 @@ if __name__ == '__main__':
             "drop_all_weapons":  99,
             "drop_all_wearable":  111,
             "drop_rig": 122,
-            "drop_backpack": 133
+            "drop_backpack": 133,
+            "rotate_5_sec": 9
             }
         # Dump to file
         with open('prices.json', 'w+') as f:

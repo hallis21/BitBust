@@ -511,6 +511,10 @@
    'C:\\Users\\halvo\\AppData\\Roaming\\Python\\Python39\\site-packages\\win32\\lib\\pywintypes.py',
    'PYMODULE'),
   ('pywin32_system32', '-', 'PYMODULE'),
+  ('_py_abc',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python39_64\\lib\\_py_abc.py',
+   'PYMODULE'),
   ('getpass',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python39_64\\lib\\getpass.py',
@@ -542,10 +546,6 @@
   ('stringprep',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python39_64\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('_py_abc',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python39_64\\lib\\_py_abc.py',
    'PYMODULE'),
   ('tracemalloc',
    'C:\\Program Files (x86)\\Microsoft Visual '

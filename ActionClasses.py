@@ -10,6 +10,13 @@ class SingleAction:
         
     async def execute(self):
         t = None
+        if len(self.args) > 0 and self.args[0] == "force":
+            t :asyncio.Future = asyncio.ensure_future(self.action())
+        if t:
+            while not t.done():
+                await asyncio.sleep(0.05)
+            return
+        
         if self.buster.tarkov_is_active and self.buster.in_raid:
             t :asyncio.Future = asyncio.ensure_future(self.action(*self.args))
         else:

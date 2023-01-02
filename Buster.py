@@ -28,7 +28,8 @@ class Buster:
             "drop_all_weapons": self.drop_all_weapons,
             "drop_all_wearable": self.drop_all_wearable,
             "drop_rig":self.drop_rig,
-            "drop_backpack": self.drop_backpack
+            "drop_backpack": self.drop_backpack,
+            "rotate_5_sec": self.rotate_screen,
         }
         
         self.running = True
@@ -52,12 +53,15 @@ class Buster:
         if action in self.rewards:
             # Create single action
             a = SingleAction(self.rewards[action], [], self)
+            if action == "rotate_5_sec":
+                a.args.append("force")
+                
             print("Queing action", action)
             await self.queue_action(a)
         else:
             await self.write_to_file(f"Action {action} does not exist")
 
-    async def write_to_file(self, data: str):
+    async def write_to_file(self, data: str, print_to_console: bool = True):
         # Append timestamp to log
         data = f"{int(time.time())} {data}"
         async with self.write_lock:
@@ -67,12 +71,12 @@ class Buster:
                     f.write("")
             with open("log.txt", "a") as f:
                 f.write(data)
-                print(data, end="\n" if data[-1] != "\n" else "")
+                if print_to_console: print(data, end="\n" if data[-1] != "\n" else "")
                 if data[-1] != "\n":
                     f.write("\n")
 
 
-    async def rotate_screen(self, duration: float = 1):
+    async def rotate_screen(self, duration: float = 5):
         screen = rotatescreen.get_primary_display()
         current_orientation = screen.current_orientation
         try:
@@ -104,6 +108,7 @@ class Buster:
         try:
             dropped = False
             while not dropped: 
+                await asyncio.sleep(0.001)
                 if not self.ensure_inventory_open: raise Exception("Inventory is not ensured") 
                 if not self.inventory_is_open: continue
                 loc = LocationValues.SLOT_ABSOLUTE_POSITIONS[item]
@@ -219,13 +224,7 @@ class Buster:
         await self.close_inventory()
         await asyncio.sleep(0.7)
         
-        
-
-    async def press_key(self, key, duration):
-        print(f"Pressing {key} for {duration} seconds")
-        await asyncio.sleep(duration)
-        print(f"Pressed {key} for {duration} seconds")
-
+    
             
 
     async def open_inventory(self):
@@ -247,6 +246,8 @@ class Buster:
         last_action = None
         while self.running:
             try:
+                # await self.write_to_file(f" Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}", print_to_console=False)
+                
                 if not self.active:
                     await asyncio.sleep(0.5)
                     continue
@@ -260,11 +261,10 @@ class Buster:
                     new_loop = asyncio.get_event_loop()
                     last_action = new_loop.create_task(action.execute())
                 await asyncio.sleep(0.1)
-            finally:
+            except Exception as e:
                 # Log the current states
-                pass
-                # await self.write_to_file(f" Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}")
-                # print(f"Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}", end="\r")
+                await self.write_to_file(f"Failed to execute action because {e}")
+                await self.write_to_file(f" Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}")
                 
                 
                 
@@ -274,8 +274,6 @@ class Buster:
             await asyncio.sleep(0.01)
             
     async def check_in_raid_task(self):
-        # self.in_raid = True
-        # return
         while self.running:
             if self.tarkov_is_active:
                 self.in_raid = not (bool(pyautogui.locateOnScreen('slots/settings.png', region=LocationValues.SETTINGS, confidence=0.7)) or\
@@ -292,7 +290,6 @@ class Buster:
             if cur - last < 0.05:  
                 await asyncio.sleep(0.01 - (cur - last))
             if not self.tarkov_is_active:
-                self.inventory_is_open = False
                 await asyncio.sleep(0.1)
             else:
                 self.inventory_is_open = \
@@ -311,6 +308,7 @@ class Buster:
                 #     pyautogui.press('tab')
                 
             last = time.time()
+        print("Done checking inventory")
                 
 
                         
@@ -318,8 +316,8 @@ class Buster:
         f1 = asyncio.ensure_future(self.main_loop())
         f2 = asyncio.ensure_future(self.check_tarkov_task())
         f3 = asyncio.ensure_future(self.check_inv_task())
-        f4 = asyncio.ensure_future(self.check_in_raid_task())
-        return [f1, f2, f3, f4]
+        # f4 = asyncio.ensure_future(self.check_in_raid_task())
+        return [f1, f2, f3]
                 
     def disable(self):
         self.active = False
