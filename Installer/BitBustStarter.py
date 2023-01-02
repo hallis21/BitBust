@@ -219,7 +219,7 @@ def main():
     try:
         with open('target_channel.txt', 'w') as f:
             f.write(BitBustData['latest_channel'])
-        os.system('move target_channel.txt BitBust/target_channel.txt')
+        shutil.move('target_channel.txt', 'BitBust/target_channel.txt')
     except Exception as e:
         print(f"Fatal error creating target_channel.txt file: {e}\n")
 
