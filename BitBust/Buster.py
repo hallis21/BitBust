@@ -76,7 +76,7 @@ class Buster:
                     f.write("\n")
 
 
-    async def rotate_screen(self, duration: float = 5):
+    async def rotate_screen(self, duration: float = 10):
         screen = rotatescreen.get_primary_display()
         current_orientation = screen.current_orientation
         try:
@@ -139,13 +139,17 @@ class Buster:
             if tries > 20:
                 await self.write_to_file(f"Failed to scroll inventory because inventory was not open")
                 return False
-        
-        loc = LocationValues.SLOT_ABSOLUTE_POSITIONS["INVENTORY"]
-        pyautogui.moveTo(loc[0], loc[1], 0, pyautogui.easeInOutQuad)
+        try:
+            loc = LocationValues.SLOT_ABSOLUTE_POSITIONS["INVENTORY"]
+            pyautogui.moveTo(loc[0], loc[1], 0, pyautogui.easeInOutQuad)
+            win32api.ClipCursor((loc[0], loc[1], loc[0], loc[1]))
 
-        for _ in range(10):
-            win32api.mouse_event(win32con.MOUSEEVENTF_WHEEL, 0, 0, 25, 0)
-            await asyncio.sleep(0.005)
+            for _ in range(10):
+                win32api.mouse_event(win32con.MOUSEEVENTF_WHEEL, 0, 0, 25, 0)
+                await asyncio.sleep(0.005)
+        finally:
+            win32api.ClipCursor((0,0,0,0))
+            
 
     # Will drop one of the main items, weapons, armor, etc
     async def drop_main_item(self, item):
@@ -286,6 +290,7 @@ class Buster:
     async def check_inv_task(self):
         last = time.time()
         while self.running:
+            await asyncio.sleep(0.001)
             cur = time.time()
             if cur - last < 0.05:  
                 await asyncio.sleep(0.01 - (cur - last))
@@ -298,12 +303,18 @@ class Buster:
                         confidence=0.7))
                     
                 # Ensure inventory is in the correct state
-                if self.tarkov_is_active and self.ensure_inventory_open and not self.inventory_is_open:
-                    print("Opening inventory")
-                    pyautogui.press('tab')
-                    await asyncio.sleep(0.01)
-                    pyautogui.click(219,21)
-                    await asyncio.sleep(0.05)
+                try:
+                    if self.tarkov_is_active and self.ensure_inventory_open and not self.inventory_is_open:
+                        print("Opening inventory")
+                        pyautogui.press('tab')
+                        await asyncio.sleep(0.005)
+                        pyautogui.moveTo(219,21, 0)
+                        win32api.ClipCursor((219-1,21-1, 219+1,21+1))
+                        await asyncio.sleep(0.005)
+                        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                        await asyncio.sleep(0.01)
+                finally:
+                    win32api.ClipCursor((0,0,0,0))
                 # elif self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:
                 #     pyautogui.press('tab')
                 
