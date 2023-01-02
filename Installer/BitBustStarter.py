@@ -64,6 +64,16 @@ def main():
         with open('BitBustData.json', 'r') as f:
             BitBustData = json.load(f)
     
+    
+    # Check if "BitBustPrices.json" exists
+    # If it does not, then create it
+    if not os.path.exists('BitBustPrices.json'):
+        with open('BitBustPrices.json', 'w') as f:
+            json.dump(prices_template, f, indent=4)
+            pyautogui.alert(text="No BitBustPrices.json found. Created a new one. Please edit it and restart the script.", title="BitBust")
+            sys.exit(0)
+    
+    
     version = ""
     try:
         response = requests.get(API_ENDPOINT)
@@ -107,7 +117,17 @@ def main():
             sys.exit(1)
         
         try:
-            download_url = response.json()['assets'][0]['browser_download_url']
+            # Find asset with name "BitBust.zip"
+            download_urls = response.json()['assets']
+            download_url = ""
+            for asset in download_urls:
+                if asset['name'] == "BitBust.zip":
+                    download_url = asset['browser_download_url']
+                    break
+            if download_url == "":
+                print("Failed to find download url")
+                sleep(10)
+                sys.exit(1)
             print(f"Downloading zip file from: {download_url}")
             response = requests.get(download_url)
             if response.status_code == 200:
@@ -156,12 +176,7 @@ def main():
         BitBustData['version'] = version
         with open('BitBustData.json', 'w') as f:
             json.dump(BitBustData, f, indent=4)
-        
-    # Check if "BitBustPrices.json" exists
-    # If it does not, then create it
-    if not os.path.exists('BitBustPrices.json'):
-        with open('BitBustPrices.json', 'w') as f:
-            json.dump(prices_template, f, indent=4)
+    
     
     # Copy the prices file to the BitBust folder
     try:
@@ -204,6 +219,7 @@ def main():
     # Run Bitty.exe
     try:
         os.system('start BitBust/Bitty.exe')
+        print("Done!")
     except Exception as e:
         print(f"Fatal error running Bitty.exe: {e}\n")
         print("Please run the file manually")
