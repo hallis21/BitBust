@@ -44,6 +44,13 @@ def main():
     # If "BitBustData.json" is not found, then it will create it
     # If it is found, it will check for a new release
     # The file containes the currently installed version
+    # Check if "BitBustPrices.json" exists
+    # If it does not, then create it
+    if not os.path.exists('BitBustPrices.json'):
+        with open('BitBustPrices.json', 'w') as f:
+            json.dump(prices_template, f, indent=4)
+            pyautogui.alert(text="No BitBustPrices.json found. Created a new one. Please edit it and restart the script.", title="BitBust")
+            sys.exit(0)
     
     # Prompt the user to pick between (1) Full reset (2) Check for updates and run
     opts = ["Check for updates and run", "Full reset\n(Will not reset prices)"]
@@ -66,13 +73,7 @@ def main():
             BitBustData = json.load(f)
     
     
-    # Check if "BitBustPrices.json" exists
-    # If it does not, then create it
-    if not os.path.exists('BitBustPrices.json'):
-        with open('BitBustPrices.json', 'w') as f:
-            json.dump(prices_template, f, indent=4)
-            pyautogui.alert(text="No BitBustPrices.json found. Created a new one. Please edit it and restart the script.", title="BitBust")
-            sys.exit(0)
+    
     
     
     version = ""
@@ -121,10 +122,13 @@ def main():
             # Find asset with name "BitBust.zip"
             download_urls = response.json()['assets']
             download_url = ""
+            
+            available_prices = ""
             for asset in download_urls:
                 if asset['name'] == "BitBust.zip":
                     download_url = asset['browser_download_url']
-                    break
+                elif asset['name'] == "BitBustPrices.json":
+                    available_prices = asset['browser_download_url']
             if download_url == "":
                 print("Failed to find download url")
                 sleep(10)
@@ -138,6 +142,29 @@ def main():
                 print(f"Failed to download zip file. Status code: {response.status_code}")
                 sleep(10)
                 sys.exit(1)
+            tmp_prices = {}
+                
+            if available_prices != "":
+                print(f"Downloading prices file from: {available_prices}")
+                response = requests.get(available_prices)
+                if response.status_code == 200:
+                    # Place the contents of the file into the template dict
+                    tmp_prices = json.loads(response.content)
+                    # Check if all keys in tmp_prices are in BitBustPrices.json
+                    # If not, then add them
+                    with open('BitBustPrices.json', 'r') as f:
+                        prices = json.load(f)
+                        added = []
+                        for key in tmp_prices:
+                            if key not in prices:
+                                prices[key] = tmp_prices[key]
+                                added.append(key)
+                        with open('BitBustPrices.json', 'w') as f:
+                            json.dump(prices, f, indent=4)
+                        if added:
+                            pyautogui.alert(text="Added new entries to BitBustPrices.json: \n{}".format(", ".join(added)), title="BitBust")
+                else:
+                    print(f"Failed to download prices file. Status code: {response.status_code}")
         except Exception as e:
             print(f"Fatal error downloading zip file: {e}\n")
             sleep(10)
@@ -197,8 +224,13 @@ def main():
         
     # Confirm with user that "latest_channel" is correct
     opts = ["Correct", "Change"]
-    should_change_channel = pyautogui.confirm(text=f"Please confirm that the channel name below is correct:\n\n    '{BitBustData['latest_channel']}'",\
-        title="BitBust", buttons=opts) == opts[1]
+    res = pyautogui.confirm(text=f"Please confirm that the channel name below is correct:\n\n    '{BitBustData['latest_channel']}'",\
+        title="BitBust", buttons=opts)
+    if res is None:
+        print("No option selected. Exiting...")
+        sleep(2)
+        sys.exit(1)
+    should_change_channel = res == opts[1]
     
     if should_change_channel:
         # Prompt the user to input the channel name
