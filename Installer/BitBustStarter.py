@@ -47,6 +47,38 @@ def main():
     # Check if "BitBustPrices.json" exists
     # If it does not, then create it
     if not os.path.exists('BitBustPrices.json'):
+        # Download the latest BitBustPrices.json file
+        try:
+            response = requests.get(API_ENDPOINT)
+            if response.status_code == 200:
+                # Get the sha from the latest release
+                version = response.json()['tag_name']
+                print(f"Latest release: {version}")
+                
+                
+                # Find asset with name "BitBustPrices.json"
+                download_urls = response.json()['assets']
+                download_url = ""
+                for asset in download_urls:
+                    if asset['name'] == "BitBustPrices.json":
+                        download_url = asset['browser_download_url']
+                        break
+                
+                if download_url != "":
+                    response = requests.get(download_url)
+                    if response.status_code == 200:
+                        prices_template = json.loads(response.content)
+                    else:
+                        print(f"Failed to download BitBustPrices.json. Status code: {response.status_code}")
+                        sleep(10)
+                        sys.exit(1)
+        except Exception as e:
+            print(f"Error downloading BitBustPrices.json: {e}\n")
+            sleep(2)
+        
+        
+        
+        
         with open('BitBustPrices.json', 'w') as f:
             json.dump(prices_template, f, indent=4)
             pyautogui.alert(text="No BitBustPrices.json found. Created a new one. Please edit it and restart the script.", title="BitBust")
