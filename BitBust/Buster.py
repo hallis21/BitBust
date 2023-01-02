@@ -29,8 +29,9 @@ class Buster:
             "drop_backpack": self.drop_backpack,
             "rotate_10_sec": self.rotate_screen,
             "walk_forward_10_sec": self.walk_forward,
-            "ensure_inventory_closed_5":self.ensure_inventory_closed_5,
-            "ensure_inventory_open_5":self.ensure_inventory_open_5
+            "ensure_inventory_closed_5": self.ensure_inventory_closed_5,
+            "ensure_inventory_open_5": self.ensure_inventory_open_5,
+            "shoot": self.shoot
         }
         
         self.running = True
@@ -152,10 +153,15 @@ class Buster:
             win32api.ClipCursor((0,0,0,0))
             
 
-    # Will drop one of the main items, weapons, armor, etc
-    async def drop_main_item(self, item):
-        # await self.drop_item(item)
-        pass
+    async def shoot(self):
+        if self.inventory_is_open:
+            self.ensure_inventory_close = True
+            await asyncio.sleep(0.01)
+        else:
+            self.ensure_inventory_close = True
+        pyautogui.click(button='left')
+        self.ensure_inventory_close = False
+        
 
 
     async def drop_primary(self):

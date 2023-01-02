@@ -50,7 +50,10 @@ async def on_message(msg: ChatMessage):
 async def backdoor_slut(cmd: ChatCommand):
     if cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
         try:
-            await bust.parse_action(prices[int(cmd.parameter)])
+            if prices[int(cmd.parameter)] == "shoot_sub":
+                await bust.parse_action("shoot")
+            else:
+                await bust.parse_action(prices[int(cmd.parameter)])
         except:
             pass
 
@@ -60,8 +63,15 @@ async def rotate(cmd: ChatCommand):
             await bust.rotate_screen(int(cmd.parameter))
         except:
             await bust.rotate_screen()
-    
-    
+
+async def on_sub(sub: ChatSub):
+    # Get price of "shoot"
+    try:
+        if "shoot_sub" in prices.items():
+            print(f"Shooting since {sub.chat.username} subbed!")
+            await bust.parse_action("shoot")
+    except:
+        pass
     
 async def run():
     global prices
@@ -78,6 +88,9 @@ async def run():
     chat.register_event(ChatEvent.READY, on_ready)
 
     chat.register_event(ChatEvent.MESSAGE, on_message)
+    
+    chat.register_event(ChatEvent.SUB, on_sub)
+    
     
     chat.register_command('test', backdoor_slut)
     chat.register_command('rotate', rotate)
@@ -110,16 +123,22 @@ if __name__ == '__main__':
     
     if not os.path.exists('prices.json'):
         t = {
-            "drop_primary":  55,
-            "drop_secondary":  66,
-            "drop_pistol":  77,
-            "drop_armor":  88,
-            "drop_all_weapons":  99,
-            "drop_all_wearable":  111,
-            "drop_rig": 122,
-            "drop_backpack": 133,
-            "rotate_5_sec": 9
-            }
+            "drop_primary":  1,
+            "drop_secondary":  2,
+            "drop_pistol":  3,
+            "drop_armor":  4,
+            "drop_all_weapons":  5,
+            "drop_all_wearable":  6,
+            "drop_rig": 7,
+            "drop_backpack": 8,
+            "rotate_5_sec": 9,
+            "walk_forward_10_sec": 10,
+            "ensure_inventory_closed_5": 11,
+            "ensure_inventory_open_5": 12,
+            "shoot_sub": 13,
+            "shoot": 14,
+        }
+
         # Dump to file
         with open('prices.json', 'w+') as f:
             json.dump(t, f)
