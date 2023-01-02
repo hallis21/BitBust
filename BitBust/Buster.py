@@ -19,8 +19,6 @@ class Buster:
     def __init__(self):
         
         self.rewards = {
-            "open_inventory": self.open_inventory, # Will ensure inv in this state 
-            "close_inventory": self.close_inventory, # Will ensure inv in this state
             "drop_primary": self.drop_primary,
             "drop_secondary": self.drop_secondary,
             "drop_pistol": self.drop_pistol,
