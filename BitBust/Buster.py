@@ -29,7 +29,10 @@ class Buster:
             "drop_all_wearable": self.drop_all_wearable,
             "drop_rig":self.drop_rig,
             "drop_backpack": self.drop_backpack,
-            "rotate_5_sec": self.rotate_screen,
+            "rotate_10_sec": self.rotate_screen,
+            "walk_forward_10_sec": self.walk_forward,
+            "ensure_inventory_closed_5":self.ensure_inventory_closed_5,
+            "ensure_inventory_open_5":self.ensure_inventory_open_5
         }
         
         self.running = True
@@ -230,11 +233,28 @@ class Buster:
         
     
             
+    async def walk_forward(self, duration=10):
+        start_time = time.time()
+        self.ensure_inventory_closed = True
+        while time.time() - start_time < duration:
+            await asyncio.sleep(0.001)
+            if self.inventory_is_open:
+                continue
+            pyautogui.press('w')
+        self.ensure_inventory_closed = False
+            
+            
+            
+    async def ensure_inventory_closed_5(self, duration=5):
+        self.ensure_inventory_closed = True
+        await asyncio.sleep(duration)
+        self.ensure_inventory_closed = False
+    
 
-    async def open_inventory(self):
+    async def ensure_inventory_open_5(self, duration=5):
         # Ensure inventory is open for 1 second
         self.ensure_inventory_open = True
-        await asyncio.sleep(1)
+        await asyncio.sleep(duration)
         self.ensure_inventory_open = False
 
 
@@ -264,7 +284,7 @@ class Buster:
                 if action: 
                     new_loop = asyncio.get_event_loop()
                     last_action = new_loop.create_task(action.execute())
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.05)
             except Exception as e:
                 # Log the current states
                 await self.write_to_file(f"Failed to execute action because {e}")
@@ -315,8 +335,11 @@ class Buster:
                         await asyncio.sleep(0.01)
                 finally:
                     win32api.ClipCursor((0,0,0,0))
-                # elif self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:
-                #     pyautogui.press('tab')
+                    
+                # Ensure open has priority over ensure close
+                if (not self.ensure_inventory_open) and self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:
+                    pyautogui.press('tab')
+                    await asyncio.sleep(0.01)
                 
             last = time.time()
         print("Done checking inventory")

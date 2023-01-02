@@ -55,7 +55,7 @@ async def backdoor_slut(cmd: ChatCommand):
             pass
 
 async def rotate(cmd: ChatCommand):
-    if cmd.user.name == 'hallis21':
+    if cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
         try:
             await bust.rotate_screen(int(cmd.parameter))
         except:
