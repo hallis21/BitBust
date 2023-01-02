@@ -181,9 +181,9 @@ def main():
     # Copy the prices file to the BitBust folder
     try:
         with open('BitBustPrices.json', 'r') as f:
-            prices = json.load(f)
-            with open('BitBust/prices.json', 'w+') as f:
-                json.dump(prices, f, indent=4)
+            if os.path.exists('BitBust/prices.json'):
+                os.remove('BitBust/prices.json')
+            os.system('copy BitBustPrices.json BitBust/prices.json')
     except Exception as e:
         print(f"Fatal error copying prices file: {e}\n")
         print("Please copy the file manually")
