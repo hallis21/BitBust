@@ -12,7 +12,7 @@ import threading
 
 
 APP_ID = 'hkcijalj81uknodvvlzs1q5ki5pzov'
-APP_SECRET = '***REMOVED***'
+APP_SECRET = 'REMOVED'
 USER_SCOPE = [AuthScope.CHAT_READ]
 TARGET_CHANNEL = "sterdekie" #input("Enter channel name: (dont fuck this up) ")
 # print("Is this correct? (y/n) channel: ", TARGET_CHANNEL)
