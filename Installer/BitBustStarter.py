@@ -10,6 +10,7 @@ from time import sleep
 import requests
 import pyautogui
 import zipfile
+import shutil
 
 
 OWNER = "hallis21"
@@ -183,7 +184,10 @@ def main():
         with open('BitBustPrices.json', 'r') as f:
             if os.path.exists('BitBust/prices.json'):
                 os.remove('BitBust/prices.json')
-            os.system('copy BitBustPrices.json BitBust/prices.json')
+            # os.system('copy BitBustPrices.json BitBust/prices.json')
+            src = 'BitBustPrices.json'
+            dst = 'BitBust/prices.json'
+            shutil.copyfile(src, dst)
     except Exception as e:
         print(f"Fatal error copying prices file: {e}\n")
         print("Please copy the file manually")
@@ -200,6 +204,10 @@ def main():
         # Prompt the user to input the channel name
         channel_name = pyautogui.prompt(text="Please enter the channel name:", title="BitBust", default=BitBustData['latest_channel'])
         # Update the json file
+        if channel_name is None:
+            print("No channel name entered. Exiting...")
+            sleep(10)
+            sys.exit(1)
         BitBustData['latest_channel'] = channel_name
         with open('BitBustData.json', 'w') as f:
             json.dump(BitBustData, f, indent=4)
@@ -217,9 +225,9 @@ def main():
 
     print("Starting BitBust.exe...")
     sleep(2)
-    # Run Bitty.exe
     try:
-        os.system('start BitBust/BitBust.exe')
+        os.chdir('BitBust')
+        os.system('start BitBust.exe')
         print("Done!")
     except Exception as e:
         print(f"Fatal error running BitBust.exe: {e}\n")
