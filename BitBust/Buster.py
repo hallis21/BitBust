@@ -55,7 +55,7 @@ class Buster:
         if action in self.rewards:
             # Create single action
             a = SingleAction(self.rewards[action], [], self)
-            if action == "rotate_5_sec":
+            if action == "rotate_10_sec":
                 a.args.append("force")
                 
             print("Queing action", action)
@@ -116,6 +116,7 @@ class Buster:
                 loc = LocationValues.SLOT_ABSOLUTE_POSITIONS[item]
                 pyautogui.moveTo(loc[0], loc[1], 0, pyautogui.easeInOutQuad)
                 # use clip cursor to lock the mouse to a certain area
+                win32api.ClipCursor((0,0,0,0))
                 win32api.ClipCursor((loc[0], loc[1], loc[0], loc[1]))
                 
                 pyautogui.press('delete')
@@ -129,7 +130,10 @@ class Buster:
             return False
         finally:
             await self.write_to_file(f"Dropped item {item}")
-            win32api.ClipCursor((0,0,0,0))
+            try:
+                win32api.ClipCursor((0,0,1919,1079))
+            except:
+                pass
         return True        
             
     
@@ -144,13 +148,17 @@ class Buster:
         try:
             loc = LocationValues.SLOT_ABSOLUTE_POSITIONS["INVENTORY"]
             pyautogui.moveTo(loc[0], loc[1], 0, pyautogui.easeInOutQuad)
+            win32api.ClipCursor((0,0,0,0))
             win32api.ClipCursor((loc[0], loc[1], loc[0], loc[1]))
 
             for _ in range(10):
                 win32api.mouse_event(win32con.MOUSEEVENTF_WHEEL, 0, 0, 25, 0)
                 await asyncio.sleep(0.005)
         finally:
-            win32api.ClipCursor((0,0,0,0))
+            try:
+                win32api.ClipCursor((0,0,1919,1079))
+            except:
+                pass
             
 
     async def shoot(self):
@@ -333,12 +341,16 @@ class Buster:
                         pyautogui.press('tab')
                         await asyncio.sleep(0.005)
                         pyautogui.moveTo(219,21, 0)
+                        win32api.ClipCursor((0,0,0,0))
                         win32api.ClipCursor((219-1,21-1, 219+1,21+1))
                         await asyncio.sleep(0.005)
                         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
                         await asyncio.sleep(0.01)
                 finally:
-                    win32api.ClipCursor((0,0,0,0))
+                    try:
+                        win32api.ClipCursor((0,0,1919,1079))
+                    except:
+                        pass
                     
                 # Ensure open has priority over ensure close
                 if (not self.ensure_inventory_open) and self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:

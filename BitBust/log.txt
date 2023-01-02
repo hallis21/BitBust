@@ -1754,3 +1754,17 @@
 1672633836 Dropped item HEADPHONE
 1672633837 Dropped item RIG
 1672633837 Dropped item BACKPACK
+1672698621 Tarkov is not active, not executing action, (False, False)
+1672698871 Dropped item ARMOR
+1672698871 Failed to drop item HEADWEAR because (5, 'ClipCursor', 'Ingen tilgang.')
+1672698871 Dropped item HEADWEAR
+1672698871 Failed to drop item FACECOVER because (5, 'ClipCursor', 'Ingen tilgang.')
+1672698871 Dropped item FACECOVER
+1672698872 Failed to drop item HEADPHONE because (5, 'ClipCursor', 'Ingen tilgang.')
+1672698872 Dropped item HEADPHONE
+1672698983 Dropped item ARMOR
+1672698983 Dropped item HEADWEAR
+1672698984 Dropped item FACECOVER
+1672698984 Dropped item HEADPHONE
+1672698986 Dropped item RIG
+1672698986 Dropped item BACKPACK
