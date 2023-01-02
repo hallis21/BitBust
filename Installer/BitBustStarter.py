@@ -209,19 +209,20 @@ def main():
     # This file will contain the channel name that the bot will join
     # Use "latest_channel" from the json file
     try:
-        with open('BitBust/target_channel.txt', 'w') as f:
+        with open('target_channel.txt', 'w') as f:
             f.write(BitBustData['latest_channel'])
+        os.system('move target_channel.txt BitBust/target_channel.txt')
     except Exception as e:
         print(f"Fatal error creating target_channel.txt file: {e}\n")
 
-    print("Starting Bitty.exe...")
+    print("Starting BitBust.exe...")
     sleep(2)
     # Run Bitty.exe
     try:
-        os.system('start BitBust/Bitty.exe')
+        os.system('start BitBust/BitBust.exe')
         print("Done!")
     except Exception as e:
-        print(f"Fatal error running Bitty.exe: {e}\n")
+        print(f"Fatal error running BitBust.exe: {e}\n")
         print("Please run the file manually")
         sleep(10)
         sys.exit(1)
