@@ -1,3 +1,3 @@
-# Instructions:
+# Yo
 
-Just run the installer or build from source :)
+Please dont bully. I haven't bothered to write docs and stuff yet.
