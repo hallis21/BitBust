@@ -22,7 +22,7 @@ class SingleAction:
         else:
             self.buster.ensure_inventory_open = False
             self.buster.ensure_inventory_close = False
-            await self.buster.write_to_file("Tarkov is not active, not executing action")
+            await self.buster.write_to_file("Tarkov is not active, not executing action, (", self.buster.tarkov_is_active, self.buster.in_raid, ")")
             
         if t:
             while not t.done():

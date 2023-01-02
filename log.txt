@@ -1742,3 +1742,15 @@
 1672629389 Dropped item RIG
 1672629390 Dropped item BACKPACK
 1672630099 Tarkov is not active, not executing action
+1672633571 Tarkov is not active, not executing action
+1672633580 Tarkov is not active, not executing action
+1672633643 Tarkov is not active, not executing action
+1672633733 Tarkov is not active, not executing action
+1672633776 Dropped item PRIMARY
+1672633791 Dropped item PRIMARY
+1672633834 Dropped item ARMOR
+1672633834 Dropped item HEADWEAR
+1672633835 Dropped item FACECOVER
+1672633836 Dropped item HEADPHONE
+1672633837 Dropped item RIG
+1672633837 Dropped item BACKPACK

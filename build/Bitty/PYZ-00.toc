@@ -511,9 +511,13 @@
    'C:\\Users\\halvo\\AppData\\Roaming\\Python\\Python39\\site-packages\\win32\\lib\\pywintypes.py',
    'PYMODULE'),
   ('pywin32_system32', '-', 'PYMODULE'),
-  ('_py_abc',
+  ('stringprep',
    'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python39_64\\lib\\_py_abc.py',
+   'Studio\\Shared\\Python39_64\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python39_64\\lib\\tracemalloc.py',
    'PYMODULE'),
   ('getpass',
    'C:\\Program Files (x86)\\Microsoft Visual '
@@ -543,13 +547,9 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python39_64\\lib\\http\\cookiejar.py',
    'PYMODULE'),
-  ('stringprep',
+  ('_py_abc',
    'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python39_64\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python39_64\\lib\\tracemalloc.py',
+   'Studio\\Shared\\Python39_64\\lib\\_py_abc.py',
    'PYMODULE'),
   ('threading',
    'C:\\Program Files (x86)\\Microsoft Visual '

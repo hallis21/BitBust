@@ -280,7 +280,7 @@ class Buster:
                     bool(pyautogui.locateOnScreen('slots/main_menu.png', region=LocationValues.MAIN_MENU, confidence=0.7)))
             else:
                 self.in_raid = False
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(0.1)
             
             
     async def check_inv_task(self):
@@ -316,8 +316,8 @@ class Buster:
         f1 = asyncio.ensure_future(self.main_loop())
         f2 = asyncio.ensure_future(self.check_tarkov_task())
         f3 = asyncio.ensure_future(self.check_inv_task())
-        # f4 = asyncio.ensure_future(self.check_in_raid_task())
-        return [f1, f2, f3]
+        f4 = asyncio.ensure_future(self.check_in_raid_task())
+        return [f1, f2, f3, f4]
                 
     def disable(self):
         self.active = False
