@@ -10,6 +10,7 @@ from twitchAPI.chat import Chat, EventData, ChatMessage, ChatSub, ChatCommand
 import asyncio
 from Buster import Buster
 import threading
+from playsound import playsound
 
 
 
@@ -91,10 +92,10 @@ async def on_sub(sub: ChatSub):
     
 async def restart_buster(cmd: ChatCommand):
     global busted
-    print("Restarting BustBot")
     if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
         return
     
+    print("Restarting BustBot")
     bust.stop()
     time_started = time.time()
     while not busted and (time.time()-time_started) < 10:
@@ -105,6 +106,14 @@ async def restart_buster(cmd: ChatCommand):
     busted = False
     bust_thread = threading.Thread(target=start_buster)
     bust_thread.start()
+    
+async def after_all(cmd: ChatCommand):
+    if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
+        return
+    try:
+        playsound("slots/aferall.mp3")
+    except:
+        pass
 
         
     
@@ -131,6 +140,7 @@ async def run():
     chat.register_command('test', backdoor_slut)
     chat.register_command('rotate', rotate)
     chat.register_command('bitbustrestart', restart_buster)
+    chat.register_command('afterall', after_all)
     
     
             
