@@ -49,6 +49,7 @@ busted = False
 bust_thread = None
 
 prices = {}
+normal_prices = {}
 
 
 def start_buster():
@@ -77,12 +78,70 @@ async def on_message(msg: ChatMessage):
 async def backdoor_slut(cmd: ChatCommand):
     if cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
         try:
-            if prices[int(cmd.parameter)] == "shoot_sub":
-                await bust.parse_action("shoot")
-            else:
-                await bust.parse_action(prices[int(cmd.parameter)])
+            if cmd.parameter in normal_prices: 
+                await bust.parse_action(cmd.parameter)
         except:
             pass
+    else:
+        if cmd.parameter not in normal_prices:
+            return
+        # Load "balance.json" from the folder one level up
+        try:
+            if not os.path.exists('../balance.json'):
+                with open('../balance.json', 'w+') as f:
+                    json.dump({"tmp":{}}, f)
+                
+            
+            balance = {}
+            with open('../balance.json', 'r') as f:
+                balance = json.load(f)
+                if cmd.user.name in balance:
+                    if cmd.parameter in balance[cmd.user.name]:
+                        if balance[cmd.user.name][cmd.parameter] > 0:
+                            await bust.parse_action(cmd.parameter)
+                            balance[cmd.user.name][cmd.parameter] -= 1
+                            
+                        if balance[cmd.user.name][cmd.parameter] > 0:
+                            del balance[cmd.user.name][cmd.parameter]
+            with open('../balance.json', 'w') as f:   
+                json.dump(balance, f)
+                
+                
+        except Exception as e:
+            print("Failed to read balance", e)
+            return
+            
+            
+async def add_balance(cmd: ChatCommand):
+    try:
+        if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
+            return
+        if not os.path.exists('../balance.json'):
+            print("Creating balance.json")
+            with open('../balance.json', 'x') as f:
+                json.dump({"placeholder":{}}, f)
+        balance = {}
+        with open('../balance.json', 'r') as f:
+            user_to_add = cmd.parameter.split(" ")[0]
+            action_to_add = cmd.parameter.split(" ")[1]
+            if action_to_add not in normal_prices:
+                print("Tried to add balance for invalid action: ", action_to_add)
+                return
+        
+            balance = json.load(f)
+            if user_to_add not in balance:
+                balance[user_to_add] = {}
+            if action_to_add not in balance[user_to_add]:
+                balance[user_to_add][action_to_add] = 0
+            balance[user_to_add][action_to_add] += 1
+
+        with open('../balance.json', 'w') as f:   
+            json.dump(balance, f)
+    except Exception as e:
+        print("Failed to add balance", e)
+        return
+        
+    
 
 async def rotate(cmd: ChatCommand):
     if cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
@@ -135,6 +194,7 @@ async def after_all(cmd: ChatCommand):
     
 async def run():
     global prices
+    global normal_prices
     
     # set up twitch api instance and add user authentication with some scopes
     twitch = await Twitch(APP_ID, APP_SECRET)
@@ -152,18 +212,19 @@ async def run():
     chat.register_event(ChatEvent.SUB, on_sub)
     
     
-    chat.register_command('test', backdoor_slut)
+    chat.register_command('daddyplease', backdoor_slut)
     chat.register_command('rotate', rotate)
     chat.register_command('bitbustrestart', restart_buster)
     chat.register_command('afterall', after_all)
+    chat.register_command('coom', add_balance)
     
     
             
     # Read "prices.json" into a global dictionary
     with open('prices.json', 'r') as f:
-        tmp_prices = json.load(f)
+        normal_prices = json.load(f)
         # invert to int:string
-        prices = {int(v):k for k,v in tmp_prices.items() if int(v) != -1}
+        prices = {int(v):k for k,v in normal_prices.items() if int(v) != -1}
     
 
     chat.start()
