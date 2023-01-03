@@ -32,6 +32,7 @@ class SingleAction:
             while not t.done():
                 if not self.buster.tarkov_is_active and self.buster.in_raid:
                     t.cancel()  
+
                     self.buster.ensure_inventory_open = False
                     self.buster.ensure_inventory_close = False
                     await self.buster.write_to_file("Tarkov is not active or not in raid, cancelling action")

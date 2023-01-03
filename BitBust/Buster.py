@@ -382,7 +382,8 @@ class Buster:
                     # Ensure inventory is in the correct state
                     try:
                         if self.tarkov_is_active and self.ensure_inventory_open and not self.inventory_is_open:
-                            print("Opening inventory")
+                            
+                            await self.write_to_file("Ensuring inventory is open")
                             pyautogui.press('tab')
                             await asyncio.sleep(0.005)
                             pyautogui.moveTo(219,21, 0)
@@ -401,6 +402,7 @@ class Buster:
                         
                     # Ensure open has priority over ensure close
                     if (not self.ensure_inventory_open) and self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:
+                        await self.write_to_file("Ensuring inventory is closed")
                         pyautogui.press('tab')
                         await asyncio.sleep(0.01)
                     

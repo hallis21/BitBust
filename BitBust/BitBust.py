@@ -138,7 +138,7 @@ async def run():
     with open('prices.json', 'r') as f:
         tmp_prices = json.load(f)
         # invert to int:string
-        prices = {int(v):k for k,v in tmp_prices.items() if int(v) > 0}
+        prices = {int(v):k for k,v in tmp_prices.items() if int(v) != -1}
     
 
     chat.start()
