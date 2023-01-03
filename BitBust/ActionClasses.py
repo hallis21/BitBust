@@ -38,6 +38,8 @@ class SingleAction:
                     await self.buster.write_to_file("Tarkov is not active or not in raid, cancelling action")
                     break
                 await asyncio.sleep(0.01)
+        self.buster.ensure_inventory_open = False
+        self.buster.ensure_inventory_close = False
 
 
 class CompoundAction:

@@ -11,6 +11,7 @@ import asyncio
 from Buster import Buster
 import threading
 from playsound import playsound
+import msvcrt
 
 
 
@@ -30,6 +31,17 @@ else:
     if input().lower().strip() != "y":
         sys.exit(1) 
 
+import signal
+
+class GracefulKiller:
+  kill_now = False
+  def __init__(self):
+    signal.signal(signal.SIGINT, self.exit_gracefully)
+    signal.signal(signal.SIGTERM, self.exit_gracefully)
+    
+    
+  def exit_gracefully(self, *args):
+    self.kill_now = True
 
 bust = Buster()
 
@@ -55,8 +67,7 @@ async def on_ready(ready_event: EventData):
     await ready_event.chat.join_room(TARGET_CHANNEL)
     print('Bot joined chat!')
 
-async def on_message(msg: ChatMessage):
-    # print(f"{msg.user.name}: {msg.text} (Bits {msg.bits})" )
+async def on_message(msg: ChatMessage):    
     if msg.bits > 0:
         if msg.bits in prices:
             if bust:
@@ -82,6 +93,8 @@ async def rotate(cmd: ChatCommand):
 
 async def on_sub(sub: ChatSub):
     # Get price of "shoot"
+        
+    
     try:
         if "shoot_sub" in prices.items():
             print(f"Shooting since {sub.chat.username} subbed!")
@@ -111,7 +124,9 @@ async def after_all(cmd: ChatCommand):
     if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
         return
     try:
-        playsound("slots/aferall.mp3")
+        # Get absolute path to this cwd
+        path = os.path.dirname(os.path.abspath(__file__)) 
+        playsound(path+"\\slots\\afterall.mp3")
     except:
         pass
 
@@ -152,12 +167,24 @@ async def run():
     
 
     chat.start()
+    killer = GracefulKiller()
     
     # Thread that waits for user input, calls bust.stop() when user presses enter
 
     try:
-        input('press ENTER to stop\n')
-        input("Press Enter again to confirm\n")
+        # check killer if kill_now is true
+        
+        enters  = 0
+        while not killer.kill_now:
+            await asyncio.sleep(0.1)
+            
+            if msvcrt.kbhit():
+                if msvcrt.getch() == b'\r':
+                    print("Hit enter again to stop BitBust")
+                    enters += 1
+            if enters >= 2:
+                print("Exiting program")
+                break
     finally:
         # now we can close the chat bot and the twitch api client
         chat.stop()
@@ -167,15 +194,7 @@ async def run():
     
 
 if __name__ == '__main__':
-    
-    # Bind "close window" button to call bust.stop() and t.join()
-    
-
-    
-    
-    
-    
-    
+  
     if not os.path.exists('prices.json'):
         t = {
             "drop_primary":  1,

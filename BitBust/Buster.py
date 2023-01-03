@@ -372,6 +372,8 @@ class Buster:
                 if cur - last < 0.05:  
                     await asyncio.sleep(0.01 - (cur - last))
                 if not self.tarkov_is_active:
+                    self.ensure_inventory_close = False
+                    self.ensure_inventory_open = False
                     await asyncio.sleep(0.1)
                 else:
                     self.inventory_is_open = \
