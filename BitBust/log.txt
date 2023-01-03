@@ -1,1770 +1,409 @@
-1672610579 Tarkov is not active, not executing action
-1672610596 Tarkov is not active, not executing action
-1672613479 Dropped item ARMOR
-1672613480 Dropped item HEADWEAR
-1672613480 Dropped item FACECOVER
-1672613480 Dropped item HEADPHONE
-1672613481 Dropped item RIG
-1672613481 Dropped item BACKPACK
-1672614450 Dropped item PRIMARY
-1672614458 Dropped item SECONDARY
-1672614466 Dropped item RIG
-1672614493 Dropped item PISTOL
-1672614493 Dropped item SECONDARY
-1672614493 Dropped item PRIMARY
-1672614501 Dropped item ARMOR
-1672614525 Dropped item ARMOR
-1672614525 Dropped item HEADWEAR
-1672614526 Dropped item FACECOVER
-1672614526 Dropped item HEADPHONE
-1672614527 Dropped item RIG
-1672614527 Dropped item BACKPACK
-1672614556 Dropped item PRIMARY
-1672614563 Dropped item SECONDARY
-1672614576 Dropped item RIG
-1672614588 Dropped item PISTOL
-1672614588 Dropped item SECONDARY
-1672614589 Dropped item PRIMARY
-1672614601 Dropped item ARMOR
-1672614601 Dropped item HEADWEAR
-1672614602 Dropped item FACECOVER
-1672614602 Dropped item HEADPHONE
-1672614603 Dropped item RIG
-1672614603 Dropped item BACKPACK
-1672614617 Dropped item PISTOL
-1672614617 Dropped item SECONDARY
-1672614617 Dropped item PRIMARY
-1672621351 Dropped item SECONDARY
-1672621383 Failed to drop item SECONDARY because inventory was not open
-1672628178  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628178  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628178  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628178  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628179  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628180  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628181  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628182  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628183  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628184  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628185  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628186  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628187  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628188  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189 Tarkov is not active, not executing action
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628189  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628190  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628191  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628192  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628193  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628194  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628195  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628196  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628197  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628198  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628199  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628200  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628201  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628202  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628203  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628204  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628205  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628206  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628207  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628208  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628209  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628210  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628211  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628212  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628213  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628226  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628226  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628226  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628227  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628228  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628229  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628230  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628231  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628231  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628231  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628231  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628231  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628231  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628231  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628232  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628233  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628234  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628235  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628236  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628237  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628238  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628239  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628240  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628241  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628242  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628243  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628244  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628245  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628246  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628247  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628248  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628249  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628249  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628249  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628249  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628249  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628249  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628249  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628250  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628250  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628250  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628250  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628250  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628250  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628250  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628251  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628251  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628251  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628251  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628251  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628252  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628252  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628252  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628252  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628252  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628252  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628252  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628253  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628253  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628253  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628253  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628253  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628254  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628254  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628254  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628254  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628254  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628254  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628254  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628255  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628255  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628255  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628255  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628255  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628256  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628256  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628256  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628256  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628256  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628256  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628256  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628257  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628257  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628257  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628257  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628257  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628258  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628258  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628258  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628258  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628258  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628258  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628258  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628259  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628259  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628259  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628259  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628259  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628260  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628260  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628260  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628260  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628260  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628260  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628261  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628261  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628261  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628261  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628261  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628261  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628262  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628262  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628262  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628262  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628262  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628262  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628263  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628263  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628263  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628263  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628263  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628263  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628264  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628264  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628264  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628264  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628264  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628264  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628265  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628265  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628265  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628265  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628265  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628265  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628266  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628266  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628266  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628266  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628266  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628266  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628266  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628267  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628267  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628267  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628267  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628267  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628268  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628268  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628268  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628268  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628268  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628268  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628268  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628269  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628269  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628269  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628269  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628269  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628270  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628270  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628270  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628270  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628270  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628270  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628270  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628271  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628271  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628271  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628271  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628271  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628272  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628272  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628272  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628272  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628272  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628272  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628272  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628273  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628273  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628273  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628273  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628273  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628274  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628274  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628274  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628274  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628274  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628274  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628274  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628275  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628275  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628275  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628275  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628275  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628276  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628276  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628276  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628276  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628276  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628276  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628277  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628277  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628277  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628277  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628278 Dropped item PRIMARY
-1672628278  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628278  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628278  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628278  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628278  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628279  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628279  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628279  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628279  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628279  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628279  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628279  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628280  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628280  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628280  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628280  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628280  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628280  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628281  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628282  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628283  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628284  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628285  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628286  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628287  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628288  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628289  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628289  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628289  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628289  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628289  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628289  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628290  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628290  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628290  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628290  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628290  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628290  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628291  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628291  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628291  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628291  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628291  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628291  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628292  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628292  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628292  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628292  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628292  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628292  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628293  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628293  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628293  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628293  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628293  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628293  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628293  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628294  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628294  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628294  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628294  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628294  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628295  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628295  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628295  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628295  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628295  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628295  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628295  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628296  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628296  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628296  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628296  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628296  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628297  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628297  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628297  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628297  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628297  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628297  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628298  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628298  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628298  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628298  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628298  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628298  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628299  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628299  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628299  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628299  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628299  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628299  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628299  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628300  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628300  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628300  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628300  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628300  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628301  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628301  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628301  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628301  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628301  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628301  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628301  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628302  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628302  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628302  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628302  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628302  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628303  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628303  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628303  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628303  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628304  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628546  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628547  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628548  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628549  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628550  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628550  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628550  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628550  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628550  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628550  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628551  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628551  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628551  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628551  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628551  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628552  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628552  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628552  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628552  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628552  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628552  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628552  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628553  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628553  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628553  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628553  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628553  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628554  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628554  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628554  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628554  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628554 Dropped item ARMOR
-1672628555  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628555 Dropped item HEADWEAR
-1672628555  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628555 Dropped item FACECOVER
-1672628555  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628555 Dropped item HEADPHONE
-1672628555  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628556  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628556  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628556  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628556  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628557  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628557 Dropped item RIG
-1672628557  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628557 Dropped item BACKPACK
-1672628557  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628557  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628557  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628557  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628558  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628558  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628558  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628558  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628558  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628558  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628559  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628559  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628559  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628559  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628559  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628559  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628560  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628560  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628560  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628560  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628560  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628560  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628560  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: False
-1672628561  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628561  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628561  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628561  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628561  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628561  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628562  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628562  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628562  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628562  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628562  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628562  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628562  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628563  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628563  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628563  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628563  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628563  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628563  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628564  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628564  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628564  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628564  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628564  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628564  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628565  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628565  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628565  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628565  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628565  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628565  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628566  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628567  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628567  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628567  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628567  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628567  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628567  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628568  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628568  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628568  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628568  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628568  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628568  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628568  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628569  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628569  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628569  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628569  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628569  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628569  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628570  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628570  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628570  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628570  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628570  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628570  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628571  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628571  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628571  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628571  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628626  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628627  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628628  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628629  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628629  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628629  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628629  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628629  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628629  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628629  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628630  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628631  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628631  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628631  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628631  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628631  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628631  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628631  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628632  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628633  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628634  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628635  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628635  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628635  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628635  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628635  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628635  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628635  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628636  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628636  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628636  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628636  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628636  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628636  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628637  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628637  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628637  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628637  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628637  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628637  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628637  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628638  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628638  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628638  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628638  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628638  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628639  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628639  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628639  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628639  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628639  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628639  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628640  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628640  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628640  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628640  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628640  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628640  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628641  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628641  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628641  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628641  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628641  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628641  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628642  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628642  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628642  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628642  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628642 Failed to drop item ARMOR because (5, 'ClipCursor', 'Ingen tilgang.')
-1672628642 Dropped item ARMOR
-1672628642  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672628768  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628768  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628768  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628768  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628768  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628769  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628769  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628769  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628769  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628769  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628769  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628770  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628771  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628772  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628773  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628774  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628775  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628776  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628777  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628778  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628779  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628780  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628780  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628780  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628780  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628780  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628780  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628780  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628781  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628781  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628781  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628781  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628781  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628781  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628782  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628782  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628782  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628782  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628782  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628783  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628783 Failed to drop item ARMOR because (5, 'ClipCursor', 'Ingen tilgang.')
-1672628783 Dropped item ARMOR
-1672628783  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628878  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628878  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628878  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628878  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628879  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628879  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628879  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628879  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628879  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628879  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628879  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628880  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628880  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628880  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628880  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628880  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628880  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628880  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628881  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628882  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628882  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628882  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628882  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628882  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628882  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628882  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628883  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628884  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628884  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628884  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628884  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628884  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628884  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628884  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628885  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628885  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628885  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628885  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628885  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628885  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628885  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628886  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628887  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628887  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628887  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628887  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628887  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628887  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628887  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628888  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628888  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628888  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628888  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628888  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628888  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628888  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628889  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628890  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628891  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628891  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628891  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628891  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628891  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628891  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628891  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628892  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628893  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628893  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628893  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628893  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628893  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628893  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628893  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628894  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628895  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628896  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628897  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628897  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628897  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628897  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628897  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628897  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628897  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628898  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628899  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628899  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628899  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628899  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628899  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628899  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628899  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628900  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628901  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628902  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628903  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628903  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628941  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628942  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
-1672628943  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628944  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628944  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628944  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628944  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628944  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628944  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628944  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628945  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628945  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628945  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628945  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628945  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628945  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628945  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628946  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628946  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628946  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628946  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628946  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628946  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628946  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628947  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628947  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628947  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628947  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628947  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628947  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628947  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628948  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628948  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628948  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628948  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628948  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628948  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628948  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628949  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628950  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628950  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628950  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628950  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628950  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628950  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628950  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628951  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628951  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628951  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628951  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628951  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
-1672628951  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628951  Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
-1672628952  Active: True, Tarkov Active: True, Inventory: True, Ensure Open: True
-1672629053 Tarkov is not active, not executing action
-1672629387 Failed to drop item ARMOR because (5, 'ClipCursor', 'Ingen tilgang.')
-1672629387 Dropped item ARMOR
-1672629388 Dropped item HEADWEAR
-1672629388 Dropped item FACECOVER
-1672629388 Failed to drop item HEADPHONE because (5, 'ClipCursor', 'Ingen tilgang.')
-1672629388 Dropped item HEADPHONE
-1672629389 Dropped item RIG
-1672629390 Dropped item BACKPACK
-1672630099 Tarkov is not active, not executing action
-1672633571 Tarkov is not active, not executing action
-1672633580 Tarkov is not active, not executing action
-1672633643 Tarkov is not active, not executing action
-1672633733 Tarkov is not active, not executing action
-1672633776 Dropped item PRIMARY
-1672633791 Dropped item PRIMARY
-1672633834 Dropped item ARMOR
-1672633834 Dropped item HEADWEAR
-1672633835 Dropped item FACECOVER
-1672633836 Dropped item HEADPHONE
-1672633837 Dropped item RIG
-1672633837 Dropped item BACKPACK
-1672698621 Tarkov is not active, not executing action, (False, False)
-1672698871 Dropped item ARMOR
-1672698871 Failed to drop item HEADWEAR because (5, 'ClipCursor', 'Ingen tilgang.')
-1672698871 Dropped item HEADWEAR
-1672698871 Failed to drop item FACECOVER because (5, 'ClipCursor', 'Ingen tilgang.')
-1672698871 Dropped item FACECOVER
-1672698872 Failed to drop item HEADPHONE because (5, 'ClipCursor', 'Ingen tilgang.')
-1672698872 Dropped item HEADPHONE
-1672698983 Dropped item ARMOR
-1672698983 Dropped item HEADWEAR
-1672698984 Dropped item FACECOVER
-1672698984 Dropped item HEADPHONE
-1672698986 Dropped item RIG
-1672698986 Dropped item BACKPACK
+1672762099 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762099 Tarkov checker is running, active: True, tarkov active: False
+1672762099 In-raid checker is running, active: True, in raid: False
+1672762099 Inventory checker is running, active: True, tarkov active: False, ensure open: False, ensure closed: False
+1672762104 Tarkov checker is running, active: True, tarkov active: True
+1672762104 In-raid checker is running, active: True, in raid: True
+1672762104 Inventory checker is running, active: True, tarkov active: False, ensure open: False, ensure closed: False
+1672762109 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762109 Tarkov checker is running, active: True, tarkov active: True
+1672762109 In-raid checker is running, active: True, in raid: True
+1672762109 Inventory checker is running, active: True, tarkov active: False, ensure open: False, ensure closed: False
+1672762114 Tarkov checker is running, active: True, tarkov active: True
+1672762114 Inventory checker is running, active: True, tarkov active: False, ensure open: False, ensure closed: False
+1672762114 In-raid checker is running, active: True, in raid: True
+1672762119 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762119 Tarkov checker is running, active: True, tarkov active: False
+1672762119 Inventory checker is running, active: True, tarkov active: False, ensure open: False, ensure closed: False
+1672762119 In-raid checker is running, active: True, in raid: False
+1672762152 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762152 Tarkov checker is running, active: True, tarkov active: False
+1672762152 In-raid checker is running, active: True, in raid: False
+1672762152 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762157 Tarkov checker is running, active: True, tarkov active: False
+1672762157 In-raid checker is running, active: True, in raid: False
+1672762157 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762162 Tarkov checker is running, active: True, tarkov active: True
+1672762162 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762162 In-raid checker is running, active: True, in raid: True
+1672762162 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762167 Tarkov checker is running, active: True, tarkov active: True
+1672762167 Inventory checker is running, active: True, inv open: True, ensure open: False, ensure closed: False
+1672762168 In-raid checker is running, active: True, in raid: True
+1672762172 Tarkov checker is running, active: True, tarkov active: True
+1672762172 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762173 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762173 In-raid checker is running, active: True, in raid: True
+1672762177 Tarkov checker is running, active: True, tarkov active: True
+1672762178 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762178 In-raid checker is running, active: True, in raid: True
+1672762182 Queing action drop_all_weapons
+1672762182 Tarkov checker is running, active: True, tarkov active: True
+1672762183 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762183 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762183 In-raid checker is running, active: True, in raid: True
+1672762187 Tarkov checker is running, active: True, tarkov active: False
+1672762188 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762188 In-raid checker is running, active: True, in raid: False
+1672762244 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762244 Tarkov checker is running, active: True, tarkov active: False
+1672762244 In-raid checker is running, active: True, in raid: False
+1672762244 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762249 Tarkov checker is running, active: True, tarkov active: False
+1672762249 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762249 In-raid checker is running, active: True, in raid: False
+1672762255 Tarkov checker is running, active: True, tarkov active: False
+1672762256 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762256 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762256 In-raid checker is running, active: True, in raid: False
+1672762261 Tarkov checker is running, active: True, tarkov active: False
+1672762285 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762291 Tarkov checker is running, active: True, tarkov active: False
+1672762291 In-raid checker is running, active: True, in raid: False
+1672762291 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762299 Queing action drop_all_weapons
+1672762303 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762425 Queing action drop_backpack
+1672762430 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762432 Tarkov checker is running, active: True, tarkov active: False
+1672762432 In-raid checker is running, active: True, in raid: False
+1672762432 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762467 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762468 Tarkov checker is running, active: True, tarkov active: False
+1672762468 In-raid checker is running, active: True, in raid: False
+1672762468 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762476 Queing action drop_all_wearable
+1672762480 Tarkov checker is running, active: True, tarkov active: False
+1672762480 In-raid checker is running, active: True, in raid: False
+1672762480 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762480 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762576 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762588 Tarkov checker is running, active: True, tarkov active: False
+1672762588 In-raid checker is running, active: True, in raid: False
+1672762588 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762588 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762593 Tarkov checker is running, active: True, tarkov active: False
+1672762593 In-raid checker is running, active: True, in raid: False
+1672762593 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762598 Tarkov checker is running, active: True, tarkov active: False
+1672762598 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762598 In-raid checker is running, active: True, in raid: False
+1672762598 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762602 Queing action drop_all_wearable
+1672762602 Popping action drop_all_wearable
+1672762602 Executing action drop_all_wearable
+1672762602 Tarkov is not active, not executing action, (False, False)
+1672762603 Tarkov checker is running, active: True, tarkov active: False
+1672762603 In-raid checker is running, active: True, in raid: False
+1672762603 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762608 Tarkov checker is running, active: True, tarkov active: False
+1672762608 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762609 In-raid checker is running, active: True, in raid: False
+1672762609 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762613 Tarkov checker is running, active: True, tarkov active: False
+1672762614 In-raid checker is running, active: True, in raid: False
+1672762614 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762618 Tarkov checker is running, active: True, tarkov active: False
+1672762618 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762619 In-raid checker is running, active: True, in raid: False
+1672762619 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762623 Tarkov checker is running, active: True, tarkov active: False
+1672762624 In-raid checker is running, active: True, in raid: False
+1672762624 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762628 Tarkov checker is running, active: True, tarkov active: False
+1672762628 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762629 In-raid checker is running, active: True, in raid: False
+1672762629 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762633 Tarkov checker is running, active: True, tarkov active: False
+1672762634 In-raid checker is running, active: True, in raid: False
+1672762634 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762638 Tarkov checker is running, active: True, tarkov active: False
+1672762639 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762639 In-raid checker is running, active: True, in raid: False
+1672762639 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762665 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762665 Tarkov checker is running, active: True, tarkov active: False
+1672762665 In-raid checker is running, active: True, in raid: False
+1672762665 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762670 Tarkov checker is running, active: True, tarkov active: False
+1672762670 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762670 In-raid checker is running, active: True, in raid: False
+1672762672 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762672 Tarkov checker is running, active: True, tarkov active: False
+1672762672 In-raid checker is running, active: True, in raid: False
+1672762672 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762677 Tarkov checker is running, active: True, tarkov active: False
+1672762677 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762677 In-raid checker is running, active: True, in raid: False
+1672762682 Tarkov checker is running, active: True, tarkov active: False
+1672762682 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762682 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762682 In-raid checker is running, active: True, in raid: False
+1672762687 Tarkov checker is running, active: True, tarkov active: False
+1672762687 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762687 In-raid checker is running, active: True, in raid: False
+1672762692 Tarkov checker is running, active: True, tarkov active: False
+1672762692 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762692 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762692 In-raid checker is running, active: True, in raid: False
+1672762697 Tarkov checker is running, active: True, tarkov active: False
+1672762697 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762697 In-raid checker is running, active: True, in raid: False
+1672762774 Main loop started
+1672762774 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762774 Starting tarkov checker
+1672762774 Tarkov checker is running, active: True, tarkov active: False
+1672762774 Starting inventory checker
+1672762774 Starting in raid checker
+1672762774 In-raid checker is running, active: True, in raid: False
+1672762774 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762779 Tarkov checker is running, active: True, tarkov active: False
+1672762779 In-raid checker is running, active: True, in raid: False
+1672762779 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762783 Queing action drop_all_wearable
+1672762783 Popping action drop_all_wearable
+1672762783 Executing action drop_all_wearable
+1672762783 Tarkov is not active, not executing action, (False, False)
+1672762784 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762784 Tarkov checker is running, active: True, tarkov active: False
+1672762784 In-raid checker is running, active: True, in raid: False
+1672762784 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762789 Tarkov checker is running, active: True, tarkov active: True
+1672762789 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762789 In-raid checker is running, active: True, in raid: True
+1672762794 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762794 Tarkov checker is running, active: True, tarkov active: True
+1672762794 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762794 In-raid checker is running, active: True, in raid: True
+1672762797 Queing action drop_all_wearable
+1672762797 Popping action drop_all_wearable
+1672762797 Executing action drop_all_wearable
+1672762799 Dropped item ARMOR
+1672762799 Tarkov checker is running, active: True, tarkov active: True
+1672762799 Dropped item HEADWEAR
+1672762799 Inventory checker is running, active: True, inv open: True, ensure open: True, ensure closed: False
+1672762800 In-raid checker is running, active: True, in raid: True
+1672762800 Dropped item FACECOVER
+1672762800 Dropped item HEADPHONE
+1672762802 Dropped item RIG
+1672762802 Dropped item BACKPACK
+1672762804 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762804 Tarkov checker is running, active: True, tarkov active: True
+1672762804 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762805 In-raid checker is running, active: True, in raid: True
+1672762809 Tarkov checker is running, active: True, tarkov active: True
+1672762810 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762810 In-raid checker is running, active: True, in raid: True
+1672762814 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762814 Tarkov checker is running, active: True, tarkov active: True
+1672762815 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762815 In-raid checker is running, active: True, in raid: True
+1672762819 Tarkov checker is running, active: True, tarkov active: True
+1672762820 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762820 In-raid checker is running, active: True, in raid: True
+1672762824 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762824 Tarkov checker is running, active: True, tarkov active: True
+1672762825 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762825 In-raid checker is running, active: True, in raid: False
+1672762829 Tarkov checker is running, active: True, tarkov active: False
+1672762830 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762830 In-raid checker is running, active: True, in raid: False
+1672762834 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762834 Tarkov checker is running, active: True, tarkov active: True
+1672762835 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762835 In-raid checker is running, active: True, in raid: True
+1672762839 Tarkov checker is running, active: True, tarkov active: False
+1672762840 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762840 In-raid checker is running, active: True, in raid: False
+1672762867 Main loop started
+1672762867 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672762867 Starting tarkov checker
+1672762867 Tarkov checker is running, active: True, tarkov active: False
+1672762867 Starting inventory checker
+1672762867 Starting in raid checker
+1672762867 In-raid checker is running, active: True, in raid: False
+1672762867 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762872 Tarkov checker is running, active: True, tarkov active: False
+1672762872 In-raid checker is running, active: True, in raid: False
+1672762872 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762877 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762877 Tarkov checker is running, active: True, tarkov active: True
+1672762877 In-raid checker is running, active: True, in raid: True
+1672762877 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762882 Tarkov checker is running, active: True, tarkov active: True
+1672762882 In-raid checker is running, active: True, in raid: True
+1672762882 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762884 Queing action ensure_inventory_open_5
+1672762884 Popping action ensure_inventory_open_5
+1672762884 Executing action ensure_inventory_open_5
+1672762887 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: True
+1672762887 Tarkov checker is running, active: True, tarkov active: True
+1672762887 In-raid checker is running, active: True, in raid: True
+1672762888 Inventory checker is running, active: True, inv open: False, ensure open: True, ensure closed: False
+1672762892 Tarkov checker is running, active: True, tarkov active: True
+1672762893 In-raid checker is running, active: True, in raid: True
+1672762893 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762896 Queing action ensure_inventory_closed_5
+1672762897 Popping action ensure_inventory_closed_5
+1672762897 Executing action ensure_inventory_closed_5
+1672762897 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762897 Tarkov checker is running, active: True, tarkov active: True
+1672762898 In-raid checker is running, active: True, in raid: True
+1672762898 Inventory checker is running, active: True, inv open: True, ensure open: False, ensure closed: False
+1672762902 Tarkov checker is running, active: True, tarkov active: True
+1672762903 In-raid checker is running, active: True, in raid: True
+1672762903 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762907 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762908 Tarkov checker is running, active: True, tarkov active: True
+1672762908 In-raid checker is running, active: True, in raid: True
+1672762908 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762911 Queing action drop_armor
+1672762911 Popping action drop_armor
+1672762911 Executing action drop_armor
+1672762912 Dropped item ARMOR
+1672762913 Tarkov checker is running, active: True, tarkov active: True
+1672762913 In-raid checker is running, active: True, in raid: True
+1672762913 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762917 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762918 Tarkov checker is running, active: True, tarkov active: True
+1672762918 In-raid checker is running, active: True, in raid: True
+1672762919 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762923 Tarkov checker is running, active: True, tarkov active: True
+1672762923 In-raid checker is running, active: True, in raid: True
+1672762924 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762927 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762928 Tarkov checker is running, active: True, tarkov active: True
+1672762928 In-raid checker is running, active: True, in raid: True
+1672762929 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762930 Queing action shoot
+1672762930 Popping action shoot
+1672762930 Executing action shoot
+1672762933 Tarkov checker is running, active: True, tarkov active: True
+1672762934 In-raid checker is running, active: True, in raid: True
+1672762934 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762938 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762938 Tarkov checker is running, active: True, tarkov active: True
+1672762939 In-raid checker is running, active: True, in raid: True
+1672762939 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762943 Tarkov checker is running, active: True, tarkov active: True
+1672762944 In-raid checker is running, active: True, in raid: True
+1672762944 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762945 Queing action drop_backpack
+1672762945 Popping action drop_backpack
+1672762945 Executing action drop_backpack
+1672762947 Dropped item BACKPACK
+1672762948 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762948 Tarkov checker is running, active: True, tarkov active: True
+1672762949 In-raid checker is running, active: True, in raid: True
+1672762949 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762953 Tarkov checker is running, active: True, tarkov active: True
+1672762954 Inventory checker is running, active: True, inv open: True, ensure open: False, ensure closed: False
+1672762954 In-raid checker is running, active: True, in raid: True
+1672762958 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: True, Ensure Open: False
+1672762959 Tarkov checker is running, active: True, tarkov active: True
+1672762959 Inventory checker is running, active: True, inv open: True, ensure open: False, ensure closed: False
+1672762959 In-raid checker is running, active: True, in raid: True
+1672762964 Tarkov checker is running, active: True, tarkov active: True
+1672762964 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762965 In-raid checker is running, active: True, in raid: True
+1672762968 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762969 Tarkov checker is running, active: True, tarkov active: True
+1672762969 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762970 In-raid checker is running, active: True, in raid: True
+1672762974 Tarkov checker is running, active: True, tarkov active: True
+1672762974 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762975 In-raid checker is running, active: True, in raid: True
+1672762978 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762979 Tarkov checker is running, active: True, tarkov active: True
+1672762979 Queing action drop_all_wearable
+1672762979 Popping action drop_all_wearable
+1672762979 Executing action drop_all_wearable
+1672762979 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762980 In-raid checker is running, active: True, in raid: True
+1672762981 Dropped item ARMOR
+1672762981 Dropped item HEADWEAR
+1672762982 Dropped item FACECOVER
+1672762982 Dropped item HEADPHONE
+1672762984 Dropped item RIG
+1672762984 Dropped item BACKPACK
+1672762984 Tarkov checker is running, active: True, tarkov active: True
+1672762985 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762985 In-raid checker is running, active: True, in raid: True
+1672762988 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672762989 Tarkov checker is running, active: True, tarkov active: True
+1672762990 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672762990 In-raid checker is running, active: True, in raid: False
+1672763085 Main loop started
+1672763085 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672763085 Starting tarkov checker
+1672763085 Tarkov checker is running, active: True, tarkov active: False
+1672763085 Starting inventory checker
+1672763085 Starting in raid checker
+1672763085 In-raid checker is running, active: True, in raid: False
+1672763085 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763090 Tarkov checker is running, active: True, tarkov active: False
+1672763090 In-raid checker is running, active: True, in raid: False
+1672763090 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763095 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672763095 Tarkov checker is running, active: True, tarkov active: True
+1672763095 In-raid checker is running, active: True, in raid: True
+1672763096 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763099 Queing action ensure_inventory_closed_5
+1672763099 Popping action ensure_inventory_closed_5
+1672763099 Executing action ensure_inventory_closed_5
+1672763100 Tarkov checker is running, active: True, tarkov active: True
+1672763101 In-raid checker is running, active: True, in raid: True
+1672763101 Inventory checker is running, active: True, inv open: True, ensure open: False, ensure closed: False
+1672763105 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672763105 Tarkov checker is running, active: True, tarkov active: False
+1672763106 In-raid checker is running, active: True, in raid: False
+1672763106 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763138 Main loop started
+1672763138 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672763138 Starting tarkov checker
+1672763138 Tarkov checker is running, active: True, tarkov active: False
+1672763138 Starting inventory checker
+1672763138 Starting in raid checker
+1672763138 In-raid checker is running, active: True, in raid: False
+1672763138 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763143 Tarkov checker is running, active: True, tarkov active: True
+1672763143 In-raid checker is running, active: True, in raid: True
+1672763143 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763147 Queing action ensure_inventory_closed_5
+1672763147 Popping action ensure_inventory_closed_5
+1672763147 Executing action ensure_inventory_closed_5
+1672763148 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672763148 Tarkov checker is running, active: True, tarkov active: True
+1672763148 In-raid checker is running, active: True, in raid: True
+1672763148 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: True
+1672763153 Tarkov checker is running, active: True, tarkov active: True
+1672763153 In-raid checker is running, active: True, in raid: True
+1672763153 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763158 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672763158 Tarkov checker is running, active: True, tarkov active: True
+1672763158 In-raid checker is running, active: True, in raid: True
+1672763158 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763162 Queing action walk_forward_10_sec
+1672763162 Popping action walk_forward_10_sec
+1672763162 Executing action walk_forward_10_sec
+1672763163 Tarkov checker is running, active: True, tarkov active: True
+1672763163 In-raid checker is running, active: True, in raid: True
+1672763163 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: True
+1672763168 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672763168 Tarkov checker is running, active: True, tarkov active: True
+1672763168 In-raid checker is running, active: True, in raid: True
+1672763168 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: True
+1672763173 Tarkov checker is running, active: True, tarkov active: False
+1672763173 In-raid checker is running, active: True, in raid: False
+1672763173 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763178 Main: Tasks in Q: 0, Active: True, Tarkov Active: True, Inventory: False, Ensure Open: False
+1672763178 Tarkov checker is running, active: True, tarkov active: True
+1672763178 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763178 In-raid checker is running, active: True, in raid: True
+1672763183 Tarkov checker is running, active: True, tarkov active: False
+1672763183 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763183 In-raid checker is running, active: True, in raid: False
+1672763188 Main: Tasks in Q: 0, Active: True, Tarkov Active: False, Inventory: False, Ensure Open: False
+1672763188 Tarkov checker is running, active: True, tarkov active: False
+1672763188 Inventory checker is running, active: True, inv open: False, ensure open: False, ensure closed: False
+1672763189 In-raid checker is running, active: True, in raid: False

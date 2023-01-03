@@ -7,6 +7,9 @@
     "drop_all_wearable":  6,
     "drop_rig": 7,
     "drop_backpack": 8,
-    "rotate_5_sec": 9,
-    "walk_forward_10_sec": 10
+    "rotate_10_sec": 9,
+    "walk_forward_10_sec": 10,
+    "ensure_inventory_closed_5": 11,
+    "ensure_inventory_open_5": 12,
+    "shoot": 13
 }

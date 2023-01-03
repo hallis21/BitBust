@@ -54,11 +54,11 @@ class Buster:
     async def parse_action(self, action: str):
         if action in self.rewards:
             # Create single action
-            a = SingleAction(self.rewards[action], [], self)
+            a = SingleAction(self.rewards[action], [], self, action)
             if action == "rotate_10_sec":
                 a.args.append("force")
                 
-            print("Queing action", action)
+            await self.write_to_file(f"Queing action {action}")
             await self.queue_action(a)
         else:
             await self.write_to_file(f"Action {action} does not exist")
@@ -87,6 +87,8 @@ class Buster:
             elif current_orientation == 0:
                 screen.rotate_to(180)
             await asyncio.sleep(duration)
+        except Exception as e:
+            await self.write_to_file(f"Failed to rotate screen because {e}")
         finally:
             screen.rotate_to(current_orientation)
 
@@ -97,6 +99,7 @@ class Buster:
         async with self.action_lock:
             print("Queued action")
             self.action_queue.append(action)
+            print(self.action_queue)
                 
     async def drop_item(self, item):
         tries = 0
@@ -247,20 +250,21 @@ class Buster:
             
     async def walk_forward(self, duration=10):
         start_time = time.time()
-        self.ensure_inventory_closed = True
+        self.ensure_inventory_close = True
         while time.time() - start_time < duration:
             await asyncio.sleep(0.001)
             if self.inventory_is_open:
                 continue
-            pyautogui.press('w')
-        self.ensure_inventory_closed = False
+            pyautogui.keyDown('w')
+        pyautogui.keyUp('w')
+        self.ensure_inventory_close = False
             
             
             
     async def ensure_inventory_closed_5(self, duration=5):
-        self.ensure_inventory_closed = True
+        self.ensure_inventory_close = True
         await asyncio.sleep(duration)
-        self.ensure_inventory_closed = False
+        self.ensure_inventory_close = False
     
 
     async def ensure_inventory_open_5(self, duration=5):
@@ -279,8 +283,14 @@ class Buster:
 
 
     async def main_loop(self):
+        await self.write_to_file(f"Main loop started")
         last_action = None
+        last_log = 0
         while self.running:
+            # Log every 10 seconds
+            if time.time() - last_log > 10:
+                await self.write_to_file(f"Main: Tasks in Q: {len(self.action_queue)}, Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}", print_to_console=False)
+                last_log = time.time()
             try:
                 # await self.write_to_file(f" Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}", print_to_console=False)
                 
@@ -292,77 +302,119 @@ class Buster:
                 async with self.action_lock:
                     if len(self.action_queue) > 0 and (not last_action or last_action.done()):
                         action = self.action_queue.pop(0)
+                        await self.write_to_file(f"Popping action {action}")
                 
                 if action: 
                     new_loop = asyncio.get_event_loop()
+                    await self.write_to_file(f"Executing action {action}")
                     last_action = new_loop.create_task(action.execute())
                 await asyncio.sleep(0.05)
             except Exception as e:
                 # Log the current states
                 await self.write_to_file(f"Failed to execute action because {e}")
                 await self.write_to_file(f" Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}")
-                
+        await self.write_to_file(f"Main loop ended")
                 
                 
     async def check_tarkov_task(self):
+        await self.write_to_file(f"Starting tarkov checker")
+        last_log = 0
         while self.running:
-            self.tarkov_is_active = pyautogui.getActiveWindowTitle() == "EscapeFromTarkov"
-            await asyncio.sleep(0.01)
+            try:
+                # Log to file once every 5 seconds
+                if time.time() - last_log > 5:
+                    last_log = time.time()
+                    await self.write_to_file(f"Tarkov checker is running, active: {self.active}, tarkov active: {self.tarkov_is_active}", print_to_console=False)
+                    
+                    
+                self.tarkov_is_active = pyautogui.getActiveWindowTitle() == "EscapeFromTarkov"
+                await asyncio.sleep(0.01)
+            except Exception as e:
+                await self.write_to_file(f"Failed to check tarkov because {e}")
+                await asyncio.sleep(0.1)
+        await self.write_to_file(f"Exiting tarkov checker")
             
     async def check_in_raid_task(self):
+        await self.write_to_file(f"Starting in raid checker")
+        last_log = 0
         while self.running:
-            if self.tarkov_is_active:
-                self.in_raid = not (bool(pyautogui.locateOnScreen('slots/settings.png', region=LocationValues.SETTINGS, confidence=0.7)) or\
-                    bool(pyautogui.locateOnScreen('slots/main_menu.png', region=LocationValues.MAIN_MENU, confidence=0.7)))
-            else:
-                self.in_raid = False
-            await asyncio.sleep(0.1)
+            try:
+                # Log to file once every 5 seconds
+                if time.time() - last_log > 5:
+                    last_log = time.time()
+                    await self.write_to_file(f"In-raid checker is running, active: {self.active}, in raid: {self.in_raid}", print_to_console=False)
+                
+                if self.tarkov_is_active:
+                    self.in_raid = not (bool(pyautogui.locateOnScreen('slots/settings.png', region=LocationValues.SETTINGS, confidence=0.7)) or\
+                        bool(pyautogui.locateOnScreen('slots/main_menu.png', region=LocationValues.MAIN_MENU, confidence=0.7)))
+                else:
+                    self.in_raid = False
+                await asyncio.sleep(0.1)
+            except Exception as e:
+                await self.write_to_file(f"Failed to check in raid because {e}")
+                await asyncio.sleep(0.1)
+        await self.write_to_file("In-raid checker stopped")
             
             
     async def check_inv_task(self):
-        last = time.time()
+        await self.write_to_file("Starting inventory checker")
+        last_log = 0
+        last = 0
         while self.running:
-            await asyncio.sleep(0.001)
-            cur = time.time()
-            if cur - last < 0.05:  
-                await asyncio.sleep(0.01 - (cur - last))
-            if not self.tarkov_is_active:
-                await asyncio.sleep(0.1)
-            else:
-                self.inventory_is_open = \
-                    bool(pyautogui.locateOnScreen('slots/INV_CHECK.png', 
-                        region=LocationValues.INVENTORY_CHECK_LOC,
-                        confidence=0.7))
-                    
-                # Ensure inventory is in the correct state
-                try:
-                    if self.tarkov_is_active and self.ensure_inventory_open and not self.inventory_is_open:
-                        print("Opening inventory")
-                        pyautogui.press('tab')
-                        await asyncio.sleep(0.005)
-                        pyautogui.moveTo(219,21, 0)
-                        win32api.ClipCursor((0,0,0,0))
-                        win32api.ClipCursor((219-1,21-1, 219+1,21+1))
-                        await asyncio.sleep(0.005)
-                        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                        await asyncio.sleep(0.01)
-                finally:
-                    try:
-                        win32api.ClipCursor((0,0,1919,1079))
-                    except:
-                        pass
-                    
-                # Ensure open has priority over ensure close
-                if (not self.ensure_inventory_open) and self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:
-                    pyautogui.press('tab')
-                    await asyncio.sleep(0.01)
+            try:
+                await asyncio.sleep(0.001)
+                # Log to file once every 5 seconds
+                cur = time.time()
+                if cur - last_log > 5:
+                    last_log = time.time()
+                    await self.write_to_file(f"Inventory checker is running, active: {self.active}, inv open: {self.inventory_is_open}, ensure open: {self.ensure_inventory_open}, ensure closed: {self.ensure_inventory_close}", print_to_console=False)
                 
-            last = time.time()
-        print("Done checking inventory")
+                if cur - last < 0.05:  
+                    await asyncio.sleep(0.01 - (cur - last))
+                if not self.tarkov_is_active:
+                    await asyncio.sleep(0.1)
+                else:
+                    self.inventory_is_open = \
+                        bool(pyautogui.locateOnScreen('slots/INV_CHECK.png', 
+                            region=LocationValues.INVENTORY_CHECK_LOC,
+                            confidence=0.7))
+                        
+                    # Ensure inventory is in the correct state
+                    try:
+                        if self.tarkov_is_active and self.ensure_inventory_open and not self.inventory_is_open:
+                            print("Opening inventory")
+                            pyautogui.press('tab')
+                            await asyncio.sleep(0.005)
+                            pyautogui.moveTo(219,21, 0)
+                            win32api.ClipCursor((0,0,0,0))
+                            win32api.ClipCursor((219-1,21-1, 219+1,21+1))
+                            await asyncio.sleep(0.005)
+                            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                            await asyncio.sleep(0.01)
+                    except Exception as e:
+                        await self.write_to_file(f"Failed to open inventory because {e}")
+                    finally:
+                        try:
+                            win32api.ClipCursor((0,0,1919,1079))
+                        except:
+                            pass
+                        
+                    # Ensure open has priority over ensure close
+                    if (not self.ensure_inventory_open) and self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:
+                        pyautogui.press('tab')
+                        await asyncio.sleep(0.01)
+                    
+                last = time.time()
+            except Exception as e:
+                await self.write_to_file(f"UNCAUGHT: Failed to check inventory because {e}", print_to_console=False)
+                await asyncio.sleep(0.1)
+        await self.write_to_file("Stopping inventory checker")
                 
 
                         
     def start(self):
+        self.running = True
+        self.active = True
         f1 = asyncio.ensure_future(self.main_loop())
         f2 = asyncio.ensure_future(self.check_tarkov_task())
         f3 = asyncio.ensure_future(self.check_inv_task())
@@ -377,6 +429,7 @@ class Buster:
         
     def stop(self):
         self.running = False
+        print("Stopping")
 
 
 

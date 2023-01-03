@@ -2,6 +2,7 @@ import json
 import os
 import sys
 from time import sleep
+import time
 from twitchAPI import Twitch
 from twitchAPI.oauth import UserAuthenticator
 from twitchAPI.types import AuthScope, ChatEvent
@@ -11,8 +12,9 @@ from Buster import Buster
 import threading
 
 
+
 APP_ID = 'hkcijalj81uknodvvlzs1q5ki5pzov'
-APP_SECRET = 'hidden'
+APP_SECRET = "hidden"
 USER_SCOPE = [AuthScope.CHAT_READ]
 
 # if "target_channel.txt" exists, use this as the target channel
@@ -28,9 +30,22 @@ else:
         sys.exit(1) 
 
 
-bust = None
+bust = Buster()
+
+busted = False
+bust_thread = None
 
 prices = {}
+
+
+def start_buster():
+    global busted
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    tasks = bust.start()
+    loop.run_until_complete(asyncio.wait(tasks))
+    busted = True
+
 
 
 async def on_ready(ready_event: EventData):
@@ -73,6 +88,27 @@ async def on_sub(sub: ChatSub):
     except:
         pass
     
+    
+async def restart_buster(cmd: ChatCommand):
+    global busted
+    print("Restarting BustBot")
+    if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
+        return
+    
+    bust.stop()
+    time_started = time.time()
+    while not busted and (time.time()-time_started) < 10:
+        await asyncio.sleep(0.5)
+    if not busted:
+        print("Force restarting BustBot")
+        bust_thread.join()
+    busted = False
+    bust_thread = threading.Thread(target=start_buster)
+    bust_thread.start()
+
+        
+    
+    
 async def run():
     global prices
     
@@ -94,6 +130,7 @@ async def run():
     
     chat.register_command('test', backdoor_slut)
     chat.register_command('rotate', rotate)
+    chat.register_command('bitbustrestart', restart_buster)
     
     
             
@@ -121,6 +158,14 @@ async def run():
 
 if __name__ == '__main__':
     
+    # Bind "close window" button to call bust.stop() and t.join()
+    
+
+    
+    
+    
+    
+    
     if not os.path.exists('prices.json'):
         t = {
             "drop_primary":  1,
@@ -147,20 +192,16 @@ if __name__ == '__main__':
     else:
     
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-        bust = Buster()
-        def start_buster():
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            tasks = bust.start()
-            loop.run_until_complete(asyncio.wait(tasks))
-            
-        t = threading.Thread(target=start_buster)
         
-        t.start()
+            
+        bust_thread = threading.Thread(target=start_buster)
+        
+        bust_thread.start()
         bust.enable()
         try:
             asyncio.run(run())
         finally:
             bust.stop()
-            t.join()
+            sleep(2)
+            bust_thread.join()
     

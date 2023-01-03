@@ -3,10 +3,14 @@ from typing import List
 
 
 class SingleAction:
-    def __init__(self, action, args, buster):
+    def __init__(self, action, args, buster, name):
         self.action = action
         self.args = args
         self.buster = buster
+        self.name = name
+        
+    def __str__(self):
+        return self.name
         
     async def execute(self):
         t = None
