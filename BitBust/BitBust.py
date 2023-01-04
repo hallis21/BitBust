@@ -32,6 +32,7 @@ else:
         sys.exit(1) 
 
 import signal
+bust = Buster()
 
 class GracefulKiller:
   kill_now = False
@@ -41,16 +42,17 @@ class GracefulKiller:
     
     
   def exit_gracefully(self, *args):
+    bust.enable_mouse_and_keyboard()
     self.kill_now = True
 
-bust = Buster()
+
 
 busted = False
 bust_thread = None
 
 prices = {}
 normal_prices = {}
-
+admins = []
 
 def start_buster():
     global busted
@@ -76,7 +78,7 @@ async def on_message(msg: ChatMessage):
                 await bust.parse_action(prices[msg.bits])
 
 async def backdoor_slut(cmd: ChatCommand):
-    if cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
+    if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or  cmd.user.name.lower() in admins:
         try:
             if cmd.parameter in normal_prices: 
                 await bust.parse_action(cmd.parameter)
@@ -95,14 +97,14 @@ async def backdoor_slut(cmd: ChatCommand):
             balance = {}
             with open('../balance.json', 'r') as f:
                 balance = json.load(f)
-                if cmd.user.name in balance:
-                    if cmd.parameter in balance[cmd.user.name]:
-                        if balance[cmd.user.name][cmd.parameter] > 0:
+                if cmd.user.name.lower() in balance:
+                    if cmd.parameter in balance[cmd.user.name.lower()]:
+                        if balance[cmd.user.name.lower()][cmd.parameter] > 0:
                             await bust.parse_action(cmd.parameter)
-                            balance[cmd.user.name][cmd.parameter] -= 1
+                            balance[cmd.user.name.lower()][cmd.parameter] -= 1
                             
-                        if balance[cmd.user.name][cmd.parameter] > 0:
-                            del balance[cmd.user.name][cmd.parameter]
+                        if balance[cmd.user.name.lower()][cmd.parameter] > 0:
+                            del balance[cmd.user.name.lower()][cmd.parameter]
             with open('../balance.json', 'w') as f:   
                 json.dump(balance, f)
                 
@@ -114,7 +116,7 @@ async def backdoor_slut(cmd: ChatCommand):
             
 async def add_balance(cmd: ChatCommand):
     try:
-        if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
+        if not (cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
             return
         if not os.path.exists('../balance.json'):
             print("Creating balance.json")
@@ -122,7 +124,7 @@ async def add_balance(cmd: ChatCommand):
                 json.dump({"placeholder":{}}, f)
         balance = {}
         with open('../balance.json', 'r') as f:
-            user_to_add = cmd.parameter.split(" ")[0]
+            user_to_add = cmd.parameter.split(" ")[0].lower()
             action_to_add = cmd.parameter.split(" ")[1]
             if action_to_add not in normal_prices:
                 print("Tried to add balance for invalid action: ", action_to_add)
@@ -144,7 +146,7 @@ async def add_balance(cmd: ChatCommand):
     
 
 async def rotate(cmd: ChatCommand):
-    if cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
+    if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
         try:
             await bust.rotate_screen(int(cmd.parameter))
         except:
@@ -164,7 +166,7 @@ async def on_sub(sub: ChatSub):
     
 async def restart_buster(cmd: ChatCommand):
     global busted
-    if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
+    if not (cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
         return
     
     print("Restarting BustBot")
@@ -180,7 +182,7 @@ async def restart_buster(cmd: ChatCommand):
     bust_thread.start()
     
 async def after_all(cmd: ChatCommand):
-    if not (cmd.user.name == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL):
+    if not (cmd.user.name.lower() == 'hallis21'):
         return
     try:
         # Get absolute path to this cwd
@@ -188,8 +190,34 @@ async def after_all(cmd: ChatCommand):
         playsound(path+"\\slots\\afterall.mp3")
     except:
         pass
+    
+# add admin command
+async def add_admin(cmd: ChatCommand):
+    global admins
+    if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins:
+        # Read admins from file
+        admins = []
+        try:
+            with open('../admins.txt', 'r') as f:
+                admins = f.read().splitlines()
+        except:
+            admins = []
+        # Add admin to list
+        if cmd.parameter.lower() not in admins:
+            admins.append(cmd.parameter.lower())
+            # Write admins to file
+            with open('../admins.txt', 'w') as f:
+                f.write("\n".join(admins))
 
         
+async def panic(cmd: ChatCommand):
+    if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins:
+        # Forcefully exit the program
+        print("Panic button pressed, exiting")
+        # get current process and kill it
+        os.kill(os.getpid(), signal.SIGTERM)
+
+
     
     
 async def run():
@@ -213,10 +241,13 @@ async def run():
     
     
     chat.register_command('daddyplease', backdoor_slut)
+    chat.register_command('coom', add_balance)
+    chat.register_command('add_buster', add_admin)
+    
     chat.register_command('rotate', rotate)
     chat.register_command('bitbustrestart', restart_buster)
     chat.register_command('afterall', after_all)
-    chat.register_command('coom', add_balance)
+    chat.register_command('bitbust_shutdown', panic)
     
     
             
@@ -255,6 +286,20 @@ async def run():
     
 
 if __name__ == '__main__':
+    
+    # Check if "balance.json" and "admins.txt" exists
+    if not os.path.exists('../balance.json'):
+        with open('../balance.json', 'w+') as f:
+            json.dump({}, f)
+    if not os.path.exists('../admins.txt'):
+        with open('../admins.txt', 'w+') as f:
+            f.write("hallis21")
+    # read admins from file
+    with open('../admins.txt', 'r') as f:
+        admins = f.read().splitlines()
+    
+    
+    
   
     if not os.path.exists('prices.json'):
         t = {

@@ -8,6 +8,7 @@ import pyautogui
 import rotatescreen
 import win32con
 import LocationValues
+from pynput import keyboard, mouse
 
 
 
@@ -46,10 +47,79 @@ class Buster:
 
         self.action_lock = asyncio.Lock()
         self.action_queue = []
+        
+        self.mouse_blocker = None #mouse.Listener()
+        #self.mouse_blocker.start()
+        self.kbd_blocker = None #self.kb_listener()
+        #self.kbd_blocker.start()
 
-
+        self.suppress_mouse = False
+        self.suppress_keyboard = False
         self.write_lock = asyncio.Lock()
 
+
+    
+    def kb_listener(self):
+        global key
+        global keyboard_listener
+
+        def on_press(key):
+            return True
+
+        def on_release(key):
+            return True
+
+        def win32_event_filter(msg, data):
+            if not self.suppress_keyboard:
+                self.kbd_blocker._suppress = False
+                return True
+            self.kbd_blocker._suppress = True        
+            return True
+
+        return  keyboard.Listener(
+            on_press=on_press, 
+            on_release=on_release, 
+            win32_event_filter=win32_event_filter,
+            suppress=False
+        )
+
+    def __enable_mouse_and_keyboard(self):
+        self.suppress_keyboard = False
+        self.suppress_mouse = False
+        
+    def __disable_mouse_and_keyboard(self):
+        if self.suppress_keyboard_mouse:
+            self.suppress_keyboard = True
+            self.suppress_mouse = True
+
+
+    async def disable_mouse_and_keyboard(self):
+        self.suppress_keyboard_mouse = True
+        self.suppress_keyboard = True
+        self.suppress_mouse = True
+        
+        if self.mouse_blocker:
+            self.mouse_blocker.stop()
+        if self.kbd_blocker:
+            self.kbd_blocker.stop()
+        self.mouse_blocker = mouse.Listener()
+        self.mouse_blocker.start()
+        self.kbd_blocker = self.kb_listener()
+        self.kbd_blocker.start()
+        await asyncio.sleep(0.05)
+
+        
+        
+        
+    async def enable_mouse_and_keyboard(self):
+        self.suppress_keyboard_mouse = False
+        self.suppress_keyboard = False
+        self.suppress_mouse = False
+        
+        if self.mouse_blocker:
+            self.mouse_blocker.stop()
+        if self.kbd_blocker:
+            self.kbd_blocker.stop()
 
     async def parse_action(self, action: str):
         if action in self.rewards:
@@ -121,8 +191,9 @@ class Buster:
                 # use clip cursor to lock the mouse to a certain area
                 win32api.ClipCursor((0,0,0,0))
                 win32api.ClipCursor((loc[0], loc[1], loc[0], loc[1]))
-                
+                self.__enable_mouse_and_keyboard()
                 pyautogui.press('delete')
+                self.__disable_mouse_and_keyboard()
                 # wait since we want to check if inventory was closed
                 await asyncio.sleep(0.05)
                 if not self.inventory_is_open: continue
@@ -177,34 +248,44 @@ class Buster:
 
     async def drop_primary(self):
         self.ensure_inventory_open = True
+        await self.disable_mouse_and_keyboard()
         print(f"Dropping primary {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.drop_item("PRIMARY")
+        await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
         await self.close_inventory()
 
     async def drop_secondary(self):
         self.ensure_inventory_open = True
+        await self.disable_mouse_and_keyboard()
         await self.drop_item("SECONDARY")
+        await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
         await self.close_inventory()
 
     async def drop_pistol(self):
         self.ensure_inventory_open = True
+        await self.disable_mouse_and_keyboard()
         await self.drop_item("PISTOL")
+        await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
         await self.close_inventory()
 
     async def drop_armor(self):
         self.ensure_inventory_open = True
+        await self.disable_mouse_and_keyboard()
         await self.drop_item("ARMOR")
+        await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
         await self.close_inventory()
         
     async def drop_all_weapons(self):
         self.ensure_inventory_open = True
+        await self.disable_mouse_and_keyboard()
         await self.drop_item("PISTOL")
         await self.drop_item("SECONDARY")
         await self.drop_item("PRIMARY")
+        await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
         await self.close_inventory()
         await asyncio.sleep(0.5)
@@ -215,15 +296,19 @@ class Buster:
     
     async def drop_rig(self):
         self.ensure_inventory_open = True
+        await self.disable_mouse_and_keyboard()
         await self.scroll_inventory()
         await self.drop_item("RIG")
+        await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
         await self.close_inventory()
 
     async def drop_backpack(self):
         self.ensure_inventory_open = True
+        await self.disable_mouse_and_keyboard()
         await self.scroll_inventory()
         await self.drop_item("BACKPACK")
+        await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
         await self.close_inventory()
         
@@ -231,17 +316,21 @@ class Buster:
     async def drop_all_wearable(self):
         # win32api press v
         win32api.keybd_event(0x56, 0, 0, 0)
+        await self.disable_mouse_and_keyboard()
         await asyncio.sleep(0.5)
         
         self.ensure_inventory_open = True
         
-        await self.drop_item("ARMOR")
         await self.drop_item("HEADWEAR")
         await self.drop_item("FACECOVER")
         await self.drop_item("HEADPHONE")
+        await self.drop_item("ARMOR")
         await self.scroll_inventory()
         await self.drop_item("RIG")
         await self.drop_item("BACKPACK")
+        
+        await self.enable_mouse_and_keyboard()
+        
         self.ensure_inventory_open = False
         await self.close_inventory()
         await asyncio.sleep(0.7)
@@ -384,9 +473,11 @@ class Buster:
                     # Ensure inventory is in the correct state
                     try:
                         if self.tarkov_is_active and self.ensure_inventory_open and not self.inventory_is_open:
-                            
                             await self.write_to_file("Ensuring inventory is open")
+                            
+                            self.__enable_mouse_and_keyboard()
                             pyautogui.press('tab')
+                            self.__disable_mouse_and_keyboard()
                             await asyncio.sleep(0.005)
                             pyautogui.moveTo(219,21, 0)
                             win32api.ClipCursor((0,0,0,0))

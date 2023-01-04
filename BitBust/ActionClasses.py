@@ -9,6 +9,12 @@ class SingleAction:
         self.buster = buster
         self.name = name
         
+        
+    async def __stop_execute(self):
+        self.buster.ensure_inventory_open = False
+        self.buster.ensure_inventory_close = False
+        await self.buster.enable_mouse_and_keyboard()
+    
     def __str__(self):
         return self.name
         
@@ -24,17 +30,14 @@ class SingleAction:
         if self.buster.tarkov_is_active and self.buster.in_raid:
             t :asyncio.Future = asyncio.ensure_future(self.action(*self.args))
         else:
-            self.buster.ensure_inventory_open = False
-            self.buster.ensure_inventory_close = False
+            await self.__stop_execute()
             await self.buster.write_to_file(f"Tarkov is not active, not executing action, ({self.buster.tarkov_is_active}, {self.buster.in_raid})")
             
         if t:
             while not t.done():
                 if not self.buster.tarkov_is_active and self.buster.in_raid:
                     t.cancel()  
-
-                    self.buster.ensure_inventory_open = False
-                    self.buster.ensure_inventory_close = False
+                    await self.__stop_execute()
                     await self.buster.write_to_file("Tarkov is not active or not in raid, cancelling action")
                     break
                 await asyncio.sleep(0.01)
