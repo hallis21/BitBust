@@ -67,7 +67,6 @@ async def on_message(msg: ChatMessage):
     if msg.bits > 0:
         if msg.bits in prices:
             if bust:
-                print(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[msg.bits]})")
                 print(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[str(msg.bits)]})")
                 await bust.parse_action(prices[str(msg.bits)])
 
