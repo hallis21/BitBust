@@ -43,6 +43,7 @@ class Buster:
 
         self.in_raid = False
         self.inventory_is_open = False
+        self.inventory_tab_is_open = False
         self.tarkov_is_active = False
 
         self.action_lock = asyncio.Lock()
@@ -483,6 +484,11 @@ class Buster:
                         bool(pyautogui.locateOnScreen('slots/INV_CHECK.png', 
                             region=LocationValues.INVENTORY_CHECK_LOC,
                             confidence=0.7))
+                    
+                    # if on another tab
+                    if not self.inventory_is_open:
+                        px = pyautogui.pixel(252,14)
+                        self.inventory_is_open = px == (54,63,79)
                         
                     # Ensure inventory is in the correct state
                     try:
@@ -492,11 +498,29 @@ class Buster:
                             self.__enable_mouse_and_keyboard()
                             pyautogui.press('tab')
                             self.__disable_mouse_and_keyboard()
+                            if self.mouse_blocker:
+                                self.mouse_blocker._suppress = False
+                            await asyncio.sleep(0.005)
+                            pyautogui.moveTo(219,21, 0)
+                            pyautogui.click()                            
+                            await asyncio.sleep(0.01)
+                            self.__disable_mouse_and_keyboard()
+                            
+                        px = pyautogui.pixel(160, 9)
+                        self.inventory_tab_is_open =  px == (255, 255, 255)
+                            
+                        # if inverory is open, but inv tab is not selected, select it
+                        if self.tarkov_is_active and self.ensure_inventory_open and self.inventory_is_open and not self.inventory_tab_is_open:
+                            await self.write_to_file("Ensuring inventory tab is selected")
+                            if self.mouse_blocker:
+                                self.mouse_blocker._suppress = False
                             await asyncio.sleep(0.005)
                             pyautogui.moveTo(219,21, 0)
                             await asyncio.sleep(0.005)
-                            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                            pyautogui.click()
                             await asyncio.sleep(0.01)
+                            self.__disable_mouse_and_keyboard()
+                        
                     except Exception as e:
                         await self.write_to_file(f"Failed to open inventory because {e}")
                     finally:
