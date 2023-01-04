@@ -68,17 +68,26 @@ async def on_message(msg: ChatMessage):
         if msg.bits in prices:
             if bust:
                 print(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[msg.bits]})")
-                await bust.parse_action(prices[msg.bits])
+                print(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[str(msg.bits)]})")
+                await bust.parse_action(prices[str(msg.bits)])
 
 async def backdoor_slut(cmd: ChatCommand):
+    param = cmd.parameter.split(" ")
+    if len(param) < 0:
+        return
+    param = param[0]
+    if param in prices:
+        param = prices[param]
+    
     if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or  cmd.user.name.lower() in admins:
         try:
-            if cmd.parameter in normal_prices: 
-                await bust.parse_action(cmd.parameter)
+            if param in normal_prices: 
+                await bust.parse_action(param)
+            
         except:
             pass
     else:
-        if cmd.parameter not in normal_prices:
+        if param not in normal_prices:
             return
         # Load "balance.json" from the folder one level up
         try:
@@ -91,13 +100,13 @@ async def backdoor_slut(cmd: ChatCommand):
             with open('../balance.json', 'r') as f:
                 balance = json.load(f)
                 if cmd.user.name.lower() in balance:
-                    if cmd.parameter in balance[cmd.user.name.lower()]:
-                        if balance[cmd.user.name.lower()][cmd.parameter] > 0:
-                            await bust.parse_action(cmd.parameter)
-                            balance[cmd.user.name.lower()][cmd.parameter] -= 1
+                    if param in balance[cmd.user.name.lower()]:
+                        if balance[cmd.user.name.lower()][param] > 0:
+                            await bust.parse_action(param)
+                            balance[cmd.user.name.lower()][param] -= 1
                             
-                        if balance[cmd.user.name.lower()][cmd.parameter] > 0:
-                            del balance[cmd.user.name.lower()][cmd.parameter]
+                        if balance[cmd.user.name.lower()][param] > 0:
+                            del balance[cmd.user.name.lower()][param]
             with open('../balance.json', 'w') as f:   
                 json.dump(balance, f)
                 
@@ -109,6 +118,15 @@ async def backdoor_slut(cmd: ChatCommand):
             
 async def add_balance(cmd: ChatCommand):
     try:
+        param = cmd.parameter.split(" ")
+        if len(param) < 2:
+            return
+        user = param[0]
+        action = param[1]
+        if action in prices:
+            action = prices[action]
+        
+        
         if not (cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
             return
         if not os.path.exists('../balance.json'):
@@ -117,8 +135,8 @@ async def add_balance(cmd: ChatCommand):
                 json.dump({"placeholder":{}}, f)
         balance = {}
         with open('../balance.json', 'r') as f:
-            user_to_add = cmd.parameter.split(" ")[0].lower()
-            action_to_add = cmd.parameter.split(" ")[1]
+            user_to_add = user
+            action_to_add = action
             if action_to_add not in normal_prices:
                 print("Tried to add balance for invalid action: ", action_to_add)
                 return
@@ -132,6 +150,7 @@ async def add_balance(cmd: ChatCommand):
 
         with open('../balance.json', 'w') as f:   
             json.dump(balance, f)
+        print("Added balance for ", user, action)
     except Exception as e:
         print("Failed to add balance", e)
         return
@@ -274,7 +293,7 @@ async def run():
     with open('prices.json', 'r') as f:
         normal_prices = json.load(f)
         # invert to int:string
-        prices = {int(v):k for k,v in normal_prices.items() if int(v) != -1}
+        prices = {str(v):k for k,v in normal_prices.items() if int(v) != -1}
     
 
     chat.start()

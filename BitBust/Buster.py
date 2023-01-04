@@ -516,7 +516,6 @@ class Buster:
                                 self.mouse_blocker._suppress = False
                             await asyncio.sleep(0.005)
                             pyautogui.moveTo(219,21, 0)
-                            await asyncio.sleep(0.005)
                             pyautogui.click()
                             await asyncio.sleep(0.01)
                             self.__disable_mouse_and_keyboard()
