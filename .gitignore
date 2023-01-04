@@ -2,3 +2,4 @@ dist/
 build/
 *.spec
 BitBust/slots/afterall.mp3
+BitBust/test.py

@@ -48,78 +48,85 @@ class Buster:
         self.action_lock = asyncio.Lock()
         self.action_queue = []
         
-        self.mouse_blocker = None #mouse.Listener()
-        #self.mouse_blocker.start()
-        self.kbd_blocker = None #self.kb_listener()
-        #self.kbd_blocker.start()
+        self.mouse_blocker = None
+        self.kbd_blocker = None
+        self.suppress_keyboard_mouse = False
+        self.last_kbdmouse_disabled_at = 0
+        
+        
+        # Variables for ensuring that the different tasks are running
+        self.inventory_task_last_run = time.time()
+        self.tarkov_task_last_run = time.time()
+        self.in_raid_task_last_run = time.time()
+        self.main_task_last_run = time.time()
 
-        self.suppress_mouse = False
-        self.suppress_keyboard = False
+
+
+
         self.write_lock = asyncio.Lock()
 
 
-    
-    def kb_listener(self):
-        global key
-        global keyboard_listener
-
-        def on_press(key):
-            return True
-
-        def on_release(key):
-            return True
-
-        def win32_event_filter(msg, data):
-            if not self.suppress_keyboard:
-                self.kbd_blocker._suppress = False
-                return True
-            self.kbd_blocker._suppress = True        
-            return True
-
-        return  keyboard.Listener(
-            on_press=on_press, 
-            on_release=on_release, 
-            win32_event_filter=win32_event_filter,
-            suppress=False
-        )
-
     def __enable_mouse_and_keyboard(self):
-        self.suppress_keyboard = False
-        self.suppress_mouse = False
+        if self.kbd_blocker:
+            self.kbd_blocker._suppress = False
+        if self.mouse_blocker:
+            self.mouse_blocker._suppress = False
         
     def __disable_mouse_and_keyboard(self):
         if self.suppress_keyboard_mouse:
-            self.suppress_keyboard = True
-            self.suppress_mouse = True
+            if self.kbd_blocker:
+                self.kbd_blocker._suppress = True
+            if self.mouse_blocker:
+                self.mouse_blocker._suppress = True
 
 
     async def disable_mouse_and_keyboard(self):
+        await self.write_to_file("Disabling mouse and keyboard")
         self.suppress_keyboard_mouse = True
-        self.suppress_keyboard = True
-        self.suppress_mouse = True
         
         if self.mouse_blocker:
             self.mouse_blocker.stop()
+            await self.write_to_file("Stopping mouse blocker thread", print_to_console=False)
+            
         if self.kbd_blocker:
             self.kbd_blocker.stop()
-        self.mouse_blocker = mouse.Listener()
+            await self.write_to_file("Stopping kybd blocker thread", print_to_console=False)
+            
+        self.mouse_blocker = mouse.Listener(suppress=True)
         self.mouse_blocker.start()
-        self.kbd_blocker = self.kb_listener()
+        await self.write_to_file("Starting mouse blocker thread", print_to_console=False)
+        
+        self.kbd_blocker = keyboard.Listener(suppress=True)
         self.kbd_blocker.start()
+        await self.write_to_file("Starting keyboard blocker thread", print_to_console=False)
+        self.last_kbdmouse_disabled_at = time.time()
         await asyncio.sleep(0.05)
+
 
         
         
         
     async def enable_mouse_and_keyboard(self):
+        await self.write_to_file("Enabling mouse and keyboard")
         self.suppress_keyboard_mouse = False
-        self.suppress_keyboard = False
-        self.suppress_mouse = False
         
         if self.mouse_blocker:
+            await self.write_to_file("Stopping mouse blocker thread", print_to_console=False)
             self.mouse_blocker.stop()
+            self.mouse_blocker = None
         if self.kbd_blocker:
+            await self.write_to_file("Stopping keyboard blocker thread", print_to_console=False)
             self.kbd_blocker.stop()
+            self.kbd_blocker = None
+            
+            # Send a "release" event for all keys in 
+            # use win32api to send key up events for all keys
+            # a,b,c,d,e ... + shift, ctrl, alt, win, esc, tab etc
+            keys_to_releasse = [0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4A, 0x4B, 0x4C, 0x4D, 0x4E, 0x4F, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59, 0x5A, 0x10, 0x11, 0x12, 0x5B, 0x1B, 0x09]
+            for key in keys_to_releasse:
+                win32api.keybd_event(key, 0, win32con.KEYEVENTF_KEYUP, 0)
+        
+            
 
     async def parse_action(self, action: str):
         if action in self.rewards:
@@ -188,9 +195,7 @@ class Buster:
                 if not self.inventory_is_open: continue
                 loc = LocationValues.SLOT_ABSOLUTE_POSITIONS[item]
                 pyautogui.moveTo(loc[0], loc[1], 0, pyautogui.easeInOutQuad)
-                # use clip cursor to lock the mouse to a certain area
-                win32api.ClipCursor((0,0,0,0))
-                win32api.ClipCursor((loc[0], loc[1], loc[0], loc[1]))
+
                 self.__enable_mouse_and_keyboard()
                 pyautogui.press('delete')
                 self.__disable_mouse_and_keyboard()
@@ -204,10 +209,7 @@ class Buster:
             return False
         finally:
             await self.write_to_file(f"Dropped item {item}")
-            try:
-                win32api.ClipCursor((0,0,1919,1079))
-            except:
-                pass
+
         return True        
             
     
@@ -222,17 +224,13 @@ class Buster:
         try:
             loc = LocationValues.SLOT_ABSOLUTE_POSITIONS["INVENTORY"]
             pyautogui.moveTo(loc[0], loc[1], 0, pyautogui.easeInOutQuad)
-            win32api.ClipCursor((0,0,0,0))
-            win32api.ClipCursor((loc[0], loc[1], loc[0], loc[1]))
+
 
             for _ in range(10):
                 win32api.mouse_event(win32con.MOUSEEVENTF_WHEEL, 0, 0, 25, 0)
                 await asyncio.sleep(0.005)
         finally:
-            try:
-                win32api.ClipCursor((0,0,1919,1079))
-            except:
-                pass
+            pass
             
 
     async def shoot(self):
@@ -368,7 +366,19 @@ class Buster:
             pyautogui.press('tab')
 
 
-
+    async def disable_kbd_mouse_check(self):
+        # Will ensure that we do not disable the mouse and keyboard in certain states
+        if ((not self.active) or (not self.tarkov_is_active) or (not self.suppress_keyboard_mouse)):
+            if self.kbd_blocker or self.mouse_blocker:
+                await self.enable_mouse_and_keyboard()
+                await self.write_to_file(f"Main: Disabled mouse and keyboard, but not in a state to do so, re-enabling", print_to_console=False)
+                return
+                
+        # Ensure that the mouse and keyboard is not disabled for more than 15 seconds
+        if self.kbd_blocker or self.mouse_blocker:
+            if time.time() - self.last_kbdmouse_disabled_at > 15:
+                await self.write_to_file(f"Main: Disabled mouse and keyboard for more than 15 seconds, re-enabling", print_to_console=False)
+                await self.enable_mouse_and_keyboard()
 
 
     async def main_loop(self):
@@ -376,12 +386,13 @@ class Buster:
         last_action = None
         last_log = 0
         while self.running:
+            self.main_task_last_run = time.time()
             # Log every 10 seconds
             if time.time() - last_log > 10:
                 await self.write_to_file(f"Main: Tasks in Q: {len(self.action_queue)}, Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}", print_to_console=False)
                 last_log = time.time()
             try:
-                # await self.write_to_file(f" Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}", print_to_console=False)
+                await self.disable_kbd_mouse_check()
                 
                 if not self.active:
                     await asyncio.sleep(0.5)
@@ -410,6 +421,7 @@ class Buster:
         last_log = 0
         while self.running:
             try:
+                self.tarkov_task_last_run = time.time()
                 # Log to file once every 5 seconds
                 if time.time() - last_log > 5:
                     last_log = time.time()
@@ -429,6 +441,7 @@ class Buster:
         while self.running:
             try:
                 # Log to file once every 5 seconds
+                self.in_raid_task_last_run = time.time()
                 if time.time() - last_log > 5:
                     last_log = time.time()
                     await self.write_to_file(f"In-raid checker is running, active: {self.active}, in raid: {self.in_raid}", print_to_console=False)
@@ -454,6 +467,7 @@ class Buster:
                 await asyncio.sleep(0.001)
                 # Log to file once every 5 seconds
                 cur = time.time()
+                self.inventory_task_last_run = cur
                 if cur - last_log > 5:
                     last_log = time.time()
                     await self.write_to_file(f"Inventory checker is running, active: {self.active}, inv open: {self.inventory_is_open}, ensure open: {self.ensure_inventory_open}, ensure closed: {self.ensure_inventory_close}", print_to_console=False)
@@ -480,18 +494,13 @@ class Buster:
                             self.__disable_mouse_and_keyboard()
                             await asyncio.sleep(0.005)
                             pyautogui.moveTo(219,21, 0)
-                            win32api.ClipCursor((0,0,0,0))
-                            win32api.ClipCursor((219-1,21-1, 219+1,21+1))
                             await asyncio.sleep(0.005)
                             win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
                             await asyncio.sleep(0.01)
                     except Exception as e:
                         await self.write_to_file(f"Failed to open inventory because {e}")
                     finally:
-                        try:
-                            win32api.ClipCursor((0,0,1919,1079))
-                        except:
-                            pass
+                        pass
                         
                     # Ensure open has priority over ensure close
                     if (not self.ensure_inventory_open) and self.tarkov_is_active and self.ensure_inventory_close and self.inventory_is_open:

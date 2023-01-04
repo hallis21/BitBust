@@ -21,15 +21,7 @@ USER_SCOPE = [AuthScope.CHAT_READ]
 
 # if "target_channel.txt" exists, use this as the target channel
 TARGET_CHANNEL = ""
-if os.path.exists('target_channel.txt'):
-    with open('target_channel.txt', 'r') as f:
-        TARGET_CHANNEL = f.read().strip()
-else:
-    print("No target channel file found, please enter the channel name manually")
-    TARGET_CHANNEL = input("Enter channel name: (dont fuck this up) ")
-    print("Is this correct? (y/n) channel: ", TARGET_CHANNEL)
-    if input().lower().strip() != "y":
-        sys.exit(1) 
+
 
 import signal
 bust = Buster()
@@ -53,6 +45,7 @@ bust_thread = None
 prices = {}
 normal_prices = {}
 admins = []
+last_restarted = 0
 
 def start_buster():
     global busted
@@ -164,12 +157,13 @@ async def on_sub(sub: ChatSub):
         pass
     
     
-async def restart_buster(cmd: ChatCommand):
+async def restart_buster(cmd: ChatCommand, force=False):
     global busted
-    if not (cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
+    if not (force or cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
         return
     
     print("Restarting BustBot")
+    last_restarted = time.time()
     bust.stop()
     time_started = time.time()
     while not busted and (time.time()-time_started) < 10:
@@ -209,6 +203,23 @@ async def add_admin(cmd: ChatCommand):
             with open('../admins.txt', 'w') as f:
                 f.write("\n".join(admins))
 
+async def rm_admin(cmd: ChatCommand):
+    global admins
+    if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins:
+        # Read admins from file
+        admins = []
+        try:
+            with open('../admins.txt', 'r') as f:
+                admins = f.read().splitlines()
+        except:
+            admins = []
+        # Remove admin to list
+        if cmd.parameter.lower() in admins:
+            admins.remove(cmd.parameter.lower())
+            # Write admins to file
+            with open('../admins.txt', 'w') as f:
+                f.write("\n".join(admins))
+
         
 async def panic(cmd: ChatCommand):
     if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins:
@@ -218,11 +229,16 @@ async def panic(cmd: ChatCommand):
         os.kill(os.getpid(), signal.SIGTERM)
 
 
-    
+# async def dkm(cmd: ChatCommand):
+#     if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins:
+#         await bust.disable_mouse_and_keyboard()
+#         await asyncio.sleep(20)
+#         await bust.enable_mouse_and_keyboard()
     
 async def run():
     global prices
     global normal_prices
+    global last_restarted
     
     # set up twitch api instance and add user authentication with some scopes
     twitch = await Twitch(APP_ID, APP_SECRET)
@@ -241,13 +257,16 @@ async def run():
     
     
     chat.register_command('daddyplease', backdoor_slut)
-    chat.register_command('coom', add_balance)
-    chat.register_command('add_buster', add_admin)
+    chat.register_command('dp', backdoor_slut)
+    chat.register_command('add_bust', add_balance)
+    chat.register_command('add_bustlord', add_admin)
+    chat.register_command('rm_bustlord', rm_admin)
     
     chat.register_command('rotate', rotate)
-    chat.register_command('bitbustrestart', restart_buster)
+    chat.register_command('bbrestart', restart_buster)
     chat.register_command('afterall', after_all)
-    chat.register_command('bitbust_shutdown', panic)
+    chat.register_command('bbpanic', panic)
+    # chat.register_command('dkm', dkm)
     
     
             
@@ -267,8 +286,20 @@ async def run():
         # check killer if kill_now is true
         
         enters  = 0
+        
         while not killer.kill_now:
             await asyncio.sleep(0.1)
+            # Ensure that all tasks are running inside of Buster
+            # 20 sec max downtime
+            cur = time.time() - 20
+            # wait 10 seconds before restarting again
+            if last_restarted < cur+10:
+                # Check if any of the tasks have been down for more than 20 seconds
+                if (bust.main_task_last_run < cur) or (bust.tarkov_task_last_run < cur) or \
+                    (bust.inventory_task_last_run < cur) or (bust.in_raid_task_last_run < cur):
+                    print("Restarting Buster since it has been down for more than 20 seconds")
+                    await restart_buster(None, force=True)
+            
             
             if msvcrt.kbhit():
                 if msvcrt.getch() == b'\r':
@@ -323,8 +354,21 @@ if __name__ == '__main__':
         with open('prices.json', 'w+') as f:
             json.dump(t, f)
         print("No prices.json found. Created a new one. Please edit it and restart the script.")
-        sleep(2)
+        sleep(1)
     else:
+        
+        if os.path.exists('target_channel.txt'):
+            with open('target_channel.txt', 'r') as f:
+                TARGET_CHANNEL = f.read().strip()
+        else:
+            print("No target channel file found, please enter the channel name manually")
+            TARGET_CHANNEL = input("Enter channel name: (dont fuck this up) ")
+            print("Is this correct? (y/n) channel: ", TARGET_CHANNEL)
+            if input().lower().strip() != "y":
+                sys.exit(1) 
+        
+        
+        
     
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
         
