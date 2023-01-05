@@ -84,7 +84,7 @@ class Buster:
                 self.mouse_blocker._suppress = True
 
 
-    async def disable_mouse_and_keyboard(self, mouse=True, keyboard=True):
+    async def disable_mouse_and_keyboard(self, block_mouse=True, block_keyboard=True):
         await self.write_to_file("Disabling mouse and keyboard")
         self.suppress_keyboard_mouse = True
         
@@ -97,11 +97,11 @@ class Buster:
             self.kbd_blocker.stop()
             self.kbd_blocker = None
             await self.write_to_file("Stopping kybd blocker thread", print_to_console=False)
-        if mouse:
+        if block_mouse:
             self.mouse_blocker = mouse.Listener(suppress=True)
             self.mouse_blocker.start()
             await self.write_to_file("Starting mouse blocker thread", print_to_console=False)
-        if keyboard:
+        if block_keyboard:
             self.kbd_blocker = keyboard.Listener(suppress=True)
             self.kbd_blocker.start()
             await self.write_to_file("Starting keyboard blocker thread", print_to_console=False)
@@ -367,12 +367,12 @@ class Buster:
 
 
     async def disable_keyboard_10_seconds(self):
-        await self.disable_mouse_and_keyboard(mouse=False, keyboard=True)
+        await self.disable_mouse_and_keyboard(block_mouse=False, block_keyboard=True)
         await asyncio.sleep(10)
         await self.enable_mouse_and_keyboard()
         
     async def disable_mouse_10_seconds(self):
-        await self.disable_mouse_and_keyboard(mouse=True, keyboard=False)
+        await self.disable_mouse_and_keyboard(block_mouse=True, block_keyboard=False)
         await asyncio.sleep(10)
         await self.enable_mouse_and_keyboard()
         
