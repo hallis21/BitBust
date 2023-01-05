@@ -199,7 +199,13 @@ class Buster:
             
         try:
             dropped = False
+            tries = 0
             while not dropped: 
+                tries += 1
+                if tries > 10:
+                    await self.write_to_file(f"Failed to drop item {item} because inventory was not open")
+                    return False
+                
                 await asyncio.sleep(0.001)
                 if not self.ensure_inventory_open: raise Exception("Inventory is not ensured") 
                 if not self.inventory_is_open or not self.inventory_tab_is_open: continue
@@ -214,6 +220,9 @@ class Buster:
                 await asyncio.sleep(0.05)
                 if not self.inventory_is_open or not self.inventory_tab_is_open: continue
                 dropped = True
+                
+                
+                
             # Realease the cursor
         except Exception as e:
             await self.write_to_file(f"Failed to drop item {item} because {e}")
