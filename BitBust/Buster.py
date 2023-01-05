@@ -187,7 +187,7 @@ class Buster:
                 
     async def drop_item(self, item):
         tries = 0
-        while not self.inventory_is_open:
+        while not self.inventory_is_open and self.inventory_tab_is_open:
             await asyncio.sleep(0.05)
             tries += 1
             if tries > 20:
@@ -199,8 +199,9 @@ class Buster:
             while not dropped: 
                 await asyncio.sleep(0.001)
                 if not self.ensure_inventory_open: raise Exception("Inventory is not ensured") 
-                if not self.inventory_is_open: continue
-                loc = LocationValues.SLOT_ABSOLUTE_POSITIONS[item]
+                if not self.inventory_is_open or not self.inventory_tab_is_open: continue
+                loc = LocationValues.SLOT_ABSOLUTE_POSITIONS[item]          
+                
                 pyautogui.moveTo(loc[0], loc[1], 0, pyautogui.easeInOutQuad)
 
                 self.__enable_mouse_and_keyboard()
@@ -208,7 +209,7 @@ class Buster:
                 self.__disable_mouse_and_keyboard()
                 # wait since we want to check if inventory was closed
                 await asyncio.sleep(0.05)
-                if not self.inventory_is_open: continue
+                if not self.inventory_is_open or not self.inventory_tab_is_open: continue
                 dropped = True
             # Realease the cursor
         except Exception as e:
@@ -222,7 +223,7 @@ class Buster:
     
     async def scroll_inventory(self):
         tries = 0
-        while not self.inventory_is_open:
+        while not self.inventory_is_open and not self.inventory_tab_is_open:
             await asyncio.sleep(0.05)
             tries += 1
             if tries > 20:
@@ -507,6 +508,22 @@ class Buster:
                         
                     # Ensure inventory is in the correct state
                     try:
+                        px = pyautogui.pixel(160, 9)
+                        self.inventory_tab_is_open =  px == (255, 255, 255)
+                            
+                        # if inverory is open, but inv tab is not selected, select it
+                        if self.tarkov_is_active and self.ensure_inventory_open and self.inventory_is_open and not self.inventory_tab_is_open:
+                            await self.write_to_file("Ensuring inventory tab is selected")
+                            if self.mouse_blocker:
+                                self.mouse_blocker._suppress = False
+                            await asyncio.sleep(0.008)
+                            pyautogui.moveTo(219,21, 0)
+                            pyautogui.click()
+                            await asyncio.sleep(0.01)
+                            self.__disable_mouse_and_keyboard()
+                        
+                        
+                        
                         if self.tarkov_is_active and self.ensure_inventory_open and not self.inventory_is_open:
                             await self.write_to_file("Ensuring inventory is open")
                             
@@ -521,19 +538,19 @@ class Buster:
                             await asyncio.sleep(0.01)
                             self.__disable_mouse_and_keyboard()
                             
-                        px = pyautogui.pixel(160, 9)
-                        self.inventory_tab_is_open =  px == (255, 255, 255)
-                            
-                        # if inverory is open, but inv tab is not selected, select it
-                        if self.tarkov_is_active and self.ensure_inventory_open and self.inventory_is_open and not self.inventory_tab_is_open:
-                            await self.write_to_file("Ensuring inventory tab is selected")
-                            if self.mouse_blocker:
-                                self.mouse_blocker._suppress = False
-                            await asyncio.sleep(0.005)
-                            pyautogui.moveTo(219,21, 0)
-                            pyautogui.click()
-                            await asyncio.sleep(0.01)
-                            self.__disable_mouse_and_keyboard()
+                            px = pyautogui.pixel(160, 9)
+                            self.inventory_tab_is_open =  px == (255, 255, 255)
+                                
+                            # if inverory is open, but inv tab is not selected, select it
+                            if self.tarkov_is_active and self.ensure_inventory_open and self.inventory_is_open and not self.inventory_tab_is_open:
+                                await self.write_to_file("Ensuring inventory tab is selected")
+                                if self.mouse_blocker:
+                                    self.mouse_blocker._suppress = False
+                                await asyncio.sleep(0.005)
+                                pyautogui.moveTo(219,21, 0)
+                                pyautogui.click()
+                                await asyncio.sleep(0.01)
+                                self.__disable_mouse_and_keyboard()
                         
                     except Exception as e:
                         await self.write_to_file(f"Failed to open inventory because {e}")
@@ -599,3 +616,4 @@ if __name__ == '__main__':
     asyncio.get_event_loop().run_until_complete(asyncio.wait(tasks))
     
     # main()
+    
