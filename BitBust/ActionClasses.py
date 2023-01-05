@@ -20,29 +20,31 @@ class SingleAction:
         
     async def execute(self):
         t = None
-        if len(self.args) > 0 and self.args[0] == "force":
-            t :asyncio.Future = asyncio.ensure_future(self.action())
-        if t:
-            while not t.done():
-                await asyncio.sleep(0.05)
-            return
-        
-        if self.buster.tarkov_is_active and self.buster.in_raid:
-            t :asyncio.Future = asyncio.ensure_future(self.action(*self.args))
-        else:
-            await self.__stop_execute()
-            await self.buster.write_to_file(f"Tarkov is not active, not executing action, ({self.buster.tarkov_is_active}, {self.buster.in_raid})")
+        async with self.buster.execute_lock:
+            if len(self.args) > 0 and self.args[0] == "force":
+                t :asyncio.Future = asyncio.ensure_future(self.action())
+            if t:
+                while not t.done():
+                    await asyncio.sleep(0.05)
+                return
             
-        if t:
-            while not t.done():
-                if not self.buster.tarkov_is_active and self.buster.in_raid:
-                    t.cancel()  
-                    await self.__stop_execute()
-                    await self.buster.write_to_file("Tarkov is not active or not in raid, cancelling action")
-                    break
-                await asyncio.sleep(0.01)
-        self.buster.ensure_inventory_open = False
-        self.buster.ensure_inventory_close = False
+            if self.buster.tarkov_is_active and self.buster.in_raid:
+                t :asyncio.Future = asyncio.ensure_future(self.action(*self.args))
+            else:
+                await self.__stop_execute()
+                await self.buster.write_to_file(f"Tarkov is not active, not executing action, ({self.buster.tarkov_is_active}, {self.buster.in_raid})")
+                
+            if t:
+                while not t.done():
+                    if not self.buster.tarkov_is_active and self.buster.in_raid:
+                        t.cancel()  
+                        await self.__stop_execute()
+                        await self.buster.write_to_file("Tarkov is not active or not in raid, cancelling action")
+                        break
+                    await asyncio.sleep(0.01)
+            await self.buster.write_to_file(f"Action {self.name} finished executing")
+            self.__stop_execute()
+            await asyncio.sleep(0.1)
 
 
 class CompoundAction:

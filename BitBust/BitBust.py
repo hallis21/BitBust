@@ -166,10 +166,9 @@ async def rotate(cmd: ChatCommand):
 
 async def on_sub(sub: ChatSub):
     # Get price of "shoot"
-        
     try:
         if "shoot_sub" in normal_prices:
-            print(f"Shooting since {sub.chat.username} subbed!")
+            print(f"Shooting since {sub.sub_message}!")
             await bust.parse_action("shoot")
     except Exception as e:
         print("Failed to shoot on sub", e)
@@ -248,11 +247,7 @@ async def panic(cmd: ChatCommand):
         os.kill(os.getpid(), signal.SIGTERM)
 
 
-# async def dkm(cmd: ChatCommand):
-#     if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins:
-#         await bust.disable_mouse_and_keyboard()
-#         await asyncio.sleep(20)
-#         await bust.enable_mouse_and_keyboard()
+
     
 async def run():
     global prices
@@ -285,7 +280,7 @@ async def run():
     chat.register_command('bbrestart', restart_buster)
     chat.register_command('afterall', after_all)
     chat.register_command('bbpanic', panic)
-    # chat.register_command('dkm', dkm)
+    
     
     
             
@@ -383,6 +378,7 @@ if __name__ == '__main__':
   
     if not os.path.exists('prices.json'):
         t = {
+            "shoot_sub": 0,
             "drop_primary":  1,
             "drop_secondary":  2,
             "drop_pistol":  3,
@@ -395,7 +391,6 @@ if __name__ == '__main__':
             "walk_forward_10_sec": 10,
             "ensure_inventory_closed_5": 11,
             "ensure_inventory_open_5": 12,
-            "shoot_sub": 13,
             "shoot": 14,
             "disable_mouse_10_sec": 15,
             "disable_keyboard_10_sec": 16

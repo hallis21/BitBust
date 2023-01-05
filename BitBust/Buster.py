@@ -18,7 +18,6 @@ class Buster:
     # Name:function
     
     def __init__(self):
-        
         self.rewards = {
             "drop_primary": self.drop_primary,
             "drop_secondary": self.drop_secondary,
@@ -50,6 +49,7 @@ class Buster:
 
         self.write_lock = asyncio.Lock()
         self.action_lock = asyncio.Lock()
+        self.execute_lock = asyncio.Lock()
         self.action_queue = []
         
         self.mouse_blocker = None
@@ -103,6 +103,9 @@ class Buster:
             await self.write_to_file("Starting mouse blocker thread", print_to_console=False)
         if block_keyboard:
             self.kbd_blocker = keyboard.Listener(suppress=True)
+            keys_to_releasse = [0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4A, 0x4B, 0x4C, 0x4D, 0x4E, 0x4F, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59, 0x5A, 0x10, 0x11, 0x12, 0x5B, 0x1B, 0x09]
+            for key in keys_to_releasse:
+                win32api.keybd_event(key, 0, win32con.KEYEVENTF_KEYUP, 0)
             self.kbd_blocker.start()
             await self.write_to_file("Starting keyboard blocker thread", print_to_console=False)
         self.last_kbdmouse_disabled_at = time.time()
@@ -242,9 +245,10 @@ class Buster:
             
 
     async def shoot(self):
+        await self.write_to_file("Shooting")
         if self.inventory_is_open:
             self.ensure_inventory_close = True
-            await asyncio.sleep(0.01)
+            await asyncio.sleep(0.1)
         else:
             self.ensure_inventory_close = True
         pyautogui.click(button='left')
