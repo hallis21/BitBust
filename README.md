@@ -16,6 +16,13 @@ A Escape From Tarkov oriented Twitch Bit integration.
     * If anything happens please attach your log.txt in an issue
 ```
 
+
+If you wish to build this program from source make sure that you have all needed PyPip packages and either run as a standard python program, or use PyInstaller to build it using this command:
+```
+pyinstaller --win-private-assemblies --hidden-import=pywintypes --noconfirm --icon 'icon.png'  --add-data 'slots/*;slots' -D .\BitBust.py
+```
+Before building you must change `APP_ID` and `APP_SECRET` in BitBust.py. See https://dev.twitch.tv for instructions on how to register an **application.**
+
 ## Rewards
 
 I feel most of the reward names are pretty self explanatory, so here is a list.
