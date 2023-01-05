@@ -3,3 +3,7 @@ build/
 *.spec
 BitBust/slots/afterall.mp3
 BitBust/test.py
+Installer/BitBust/
+Installer/balance.json
+Installer/BitBustData.json
+Installer/balance.json
