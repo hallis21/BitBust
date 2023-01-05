@@ -12,5 +12,7 @@
     "ensure_inventory_closed_5": 11,
     "ensure_inventory_open_5": 12,
     "shoot_sub": 13,
-    "shoot": 14
+    "shoot": 14,
+    "disable_mouse_10_sec": 15,
+    "disable_keyboard_10_sec": 16
 }

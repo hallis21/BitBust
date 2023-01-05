@@ -3,6 +3,7 @@ import os
 import sys
 from time import sleep
 import time
+import requests
 from twitchAPI import Twitch
 from twitchAPI.oauth import UserAuthenticator
 from twitchAPI.types import AuthScope, ChatEvent
@@ -166,12 +167,12 @@ async def rotate(cmd: ChatCommand):
 async def on_sub(sub: ChatSub):
     # Get price of "shoot"
         
-    
     try:
-        if "shoot_sub" in prices.items():
+        if "shoot_sub" in normal_prices:
             print(f"Shooting since {sub.chat.username} subbed!")
             await bust.parse_action("shoot")
-    except:
+    except Exception as e:
+        print("Failed to shoot on sub", e)
         pass
     
     
@@ -331,8 +332,38 @@ async def run():
         chat.stop()
         await twitch.close()
 
+# unsused for now
+async def force_update():
+    OWNER = "hallis21"
+    REPO = "BitBust"
+    API_ENDPOINT = f"https://api.github.com/repos/{OWNER}/{REPO}/releases/latest"
+
+    # Set the API endpoint
+    # Will update the application
+    # Downloads the latest version from github
+    # Unpacks it, copies prices.json and target_channel.txt to the folder
+    # and then runs the new version with argument "delete_old"
+    # The new version will then delete the old version and start
+
     
-    
+    # Get latest release from github
+    r = requests.get(url = API_ENDPOINT)
+    data = r.json()
+    # Get the download url, find "BitBust.zip"
+    download_url = ""
+    for asset in data['assets']:
+        if asset['name'] == "BitBust.zip":
+            download_url = asset['browser_download_url']
+            break
+    if download_url == "":
+        print("Could not find download url")
+        return
+    # Download the zip file
+    r = requests.get(url = download_url)
+    # Write the zip file to disk
+    with open("BitBust.zip", "wb") as f:
+        f.write(r.content)
+    # Unpack the zip file to ../BitBust
 
 if __name__ == '__main__':
     
@@ -365,7 +396,9 @@ if __name__ == '__main__':
             "ensure_inventory_closed_5": 11,
             "ensure_inventory_open_5": 12,
             "shoot_sub": 13,
-            "shoot": 14
+            "shoot": 14,
+            "disable_mouse_10_sec": 15,
+            "disable_keyboard_10_sec": 16
         }
 
         # Dump to file

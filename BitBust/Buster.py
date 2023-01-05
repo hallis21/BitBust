@@ -32,7 +32,9 @@ class Buster:
             "walk_forward_10_sec": self.walk_forward,
             "ensure_inventory_closed_5": self.ensure_inventory_closed_5,
             "ensure_inventory_open_5": self.ensure_inventory_open_5,
-            "shoot": self.shoot
+            "shoot": self.shoot,
+            "disable_mouse_10_sec": self.disable_mouse_10_seconds,
+            "disable_keyboard_10_sec": self.disable_keyboard_10_seconds,
         }
         
         self.running = True
@@ -46,12 +48,16 @@ class Buster:
         self.inventory_tab_is_open = False
         self.tarkov_is_active = False
 
+        self.write_lock = asyncio.Lock()
         self.action_lock = asyncio.Lock()
         self.action_queue = []
         
         self.mouse_blocker = None
         self.kbd_blocker = None
         self.suppress_keyboard_mouse = False
+        
+        self.disabled_keys = []
+        
         self.last_kbdmouse_disabled_at = 0
         
         
@@ -62,9 +68,6 @@ class Buster:
         self.main_task_last_run = time.time()
 
 
-
-
-        self.write_lock = asyncio.Lock()
 
 
     def __enable_mouse_and_keyboard(self):
@@ -81,35 +84,38 @@ class Buster:
                 self.mouse_blocker._suppress = True
 
 
-    async def disable_mouse_and_keyboard(self):
+    async def disable_mouse_and_keyboard(self, mouse=True, keyboard=True):
         await self.write_to_file("Disabling mouse and keyboard")
         self.suppress_keyboard_mouse = True
         
         if self.mouse_blocker:
             self.mouse_blocker.stop()
+            self.mouse_blocker = None
             await self.write_to_file("Stopping mouse blocker thread", print_to_console=False)
             
         if self.kbd_blocker:
             self.kbd_blocker.stop()
+            self.kbd_blocker = None
             await self.write_to_file("Stopping kybd blocker thread", print_to_console=False)
-            
-        self.mouse_blocker = mouse.Listener(suppress=True)
-        self.mouse_blocker.start()
-        await self.write_to_file("Starting mouse blocker thread", print_to_console=False)
-        
-        self.kbd_blocker = keyboard.Listener(suppress=True)
-        self.kbd_blocker.start()
-        await self.write_to_file("Starting keyboard blocker thread", print_to_console=False)
+        if mouse:
+            self.mouse_blocker = mouse.Listener(suppress=True)
+            self.mouse_blocker.start()
+            await self.write_to_file("Starting mouse blocker thread", print_to_console=False)
+        if keyboard:
+            self.kbd_blocker = keyboard.Listener(suppress=True)
+            self.kbd_blocker.start()
+            await self.write_to_file("Starting keyboard blocker thread", print_to_console=False)
         self.last_kbdmouse_disabled_at = time.time()
         await asyncio.sleep(0.05)
 
 
         
         
-        
     async def enable_mouse_and_keyboard(self):
         await self.write_to_file("Enabling mouse and keyboard")
         self.suppress_keyboard_mouse = False
+        
+
         
         if self.mouse_blocker:
             await self.write_to_file("Stopping mouse blocker thread", print_to_console=False)
@@ -334,7 +340,6 @@ class Buster:
         await self.close_inventory()
         await asyncio.sleep(0.7)
         
-    
             
     async def walk_forward(self, duration=10):
         start_time = time.time()
@@ -346,7 +351,6 @@ class Buster:
             pyautogui.keyDown('w')
         pyautogui.keyUp('w')
         self.ensure_inventory_close = False
-            
             
             
     async def ensure_inventory_closed_5(self, duration=5):
@@ -362,6 +366,17 @@ class Buster:
         self.ensure_inventory_open = False
 
 
+    async def disable_keyboard_10_seconds(self):
+        await self.disable_mouse_and_keyboard(mouse=False, keyboard=True)
+        await asyncio.sleep(10)
+        await self.enable_mouse_and_keyboard()
+        
+    async def disable_mouse_10_seconds(self):
+        await self.disable_mouse_and_keyboard(mouse=True, keyboard=False)
+        await asyncio.sleep(10)
+        await self.enable_mouse_and_keyboard()
+        
+    
     async def close_inventory(self):
         if self.inventory_is_open:
             pyautogui.press('tab')
