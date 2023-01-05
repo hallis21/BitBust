@@ -121,7 +121,7 @@ async def add_balance(cmd: ChatCommand):
         param = cmd.parameter.split(" ")
         if len(param) < 2:
             return
-        user = param[0]
+        user = param[0].lower()
         action = param[1]
         if action in prices:
             action = prices[action]
