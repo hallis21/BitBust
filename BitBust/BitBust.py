@@ -59,17 +59,20 @@ def start_buster():
 
 
 async def on_ready(ready_event: EventData):
-    print('Bot starting up!')
+    bust_log('Bot starting up!')
     
     await ready_event.chat.join_room(TARGET_CHANNEL)
-    print('Bot joined chat!')
+    bust_log('Bot joined chat!')
+    
+def bust_log(msg, print_to_console=True):
+    bust.thread_safe_write_to_file(msg, print_to_console=print_to_console)
 
 async def on_message(msg: ChatMessage):    
     if msg.bits > 0:
         if msg.bits in prices:
             if bust:
-                print(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[str(msg.bits)]})")
-                await bust.parse_action(prices[str(msg.bits)])
+                bust_log(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[str(msg.bits)]})")
+                bust.call_threadsafe_parse_action(prices[str(msg.bits)])
 
 async def backdoor_slut(cmd: ChatCommand):
     param = cmd.parameter.split(" ")
@@ -82,8 +85,8 @@ async def backdoor_slut(cmd: ChatCommand):
     if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or  cmd.user.name.lower() in admins:
         try:
             if param in normal_prices: 
-                await bust.parse_action(param)
-            
+                bust.call_threadsafe_parse_action(param)
+            bust_log(f"Admin: {cmd.user.name.lower()} queued {param}")
         except:
             pass
     else:
@@ -102,9 +105,11 @@ async def backdoor_slut(cmd: ChatCommand):
                 if cmd.user.name.lower() in balance:
                     if param in balance[cmd.user.name.lower()]:
                         if balance[cmd.user.name.lower()][param] > 0:
-                            await bust.parse_action(param)
+                            bust_log(f"{cmd.user.name.lower()} queued {param}")
+                            bust.call_threadsafe_parse_action(param)
                             balance[cmd.user.name.lower()][param] -= 1
-                            
+                        else:
+                            bust_log(f"{cmd.user.name.lower()} tired to do {param}, but had no balance")
                         if balance[cmd.user.name.lower()][param] > 0:
                             del balance[cmd.user.name.lower()][param]
             with open('../balance.json', 'w') as f:   
@@ -112,7 +117,7 @@ async def backdoor_slut(cmd: ChatCommand):
                 
                 
         except Exception as e:
-            print("Failed to read balance", e)
+            bust_log("Failed to read balance", e)
             return
             
             
@@ -130,7 +135,7 @@ async def add_balance(cmd: ChatCommand):
         if not (cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
             return
         if not os.path.exists('../balance.json'):
-            print("Creating balance.json")
+            bust_log("Creating balance.json")
             with open('../balance.json', 'x') as f:
                 json.dump({"placeholder":{}}, f)
         balance = {}
@@ -138,7 +143,7 @@ async def add_balance(cmd: ChatCommand):
             user_to_add = user
             action_to_add = action
             if action_to_add not in normal_prices:
-                print("Tried to add balance for invalid action: ", action_to_add)
+                bust_log("Tried to add balance for invalid action: ", action_to_add)
                 return
         
             balance = json.load(f)
@@ -150,9 +155,9 @@ async def add_balance(cmd: ChatCommand):
 
         with open('../balance.json', 'w') as f:   
             json.dump(balance, f)
-        print("Added balance for ", user, action)
+        bust_log("Added balance for ", user, action)
     except Exception as e:
-        print("Failed to add balance", e)
+        bust_log("Failed to add balance", e)
         return
         
     
@@ -168,19 +173,20 @@ async def on_sub(sub: ChatSub):
     # Get price of "shoot"
     try:
         if "shoot_sub" in normal_prices:
-            print(f"Shooting since {sub.sub_message}!")
-            await bust.parse_action("shoot")
+            bust_log(f"Shooting since {sub.sub_message}!")
+            bust.call_threadsafe_parse_action("shoot")
     except Exception as e:
-        print("Failed to shoot on sub", e)
+        bust_log("Failed to shoot on sub", e)
         pass
     
     
 async def restart_buster(cmd: ChatCommand, force=False):
     global busted
+    global last_restarted
     if not (force or cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
         return
     
-    print("Restarting BustBot")
+    bust_log("Restarting BustBot")
     last_restarted = time.time()
     bust.stop()
     time_started = time.time()

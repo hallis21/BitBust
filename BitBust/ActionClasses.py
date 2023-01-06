@@ -43,7 +43,7 @@ class SingleAction:
                         break
                     await asyncio.sleep(0.01)
             await self.buster.write_to_file(f"Action {self.name} finished executing")
-            self.__stop_execute()
+            await self.__stop_execute()
             await asyncio.sleep(0.1)
 
 

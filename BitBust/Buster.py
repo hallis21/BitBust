@@ -42,6 +42,8 @@ class Buster:
         self.ensure_inventory_open = False
         self.ensure_inventory_close = False
 
+
+        self.buster_main_loop = None
         self.in_raid = False
         self.inventory_is_open = False
         self.inventory_tab_is_open = False
@@ -137,6 +139,9 @@ class Buster:
                 win32api.keybd_event(key, 0, win32con.KEYEVENTF_KEYUP, 0)
         
             
+    def call_threadsafe_parse_action(self, action: str):
+        asyncio.run_coroutine_threadsafe(self.parse_action(action), self.buster_main_loop)
+
 
     async def parse_action(self, action: str):
         if action in self.rewards:
@@ -149,6 +154,10 @@ class Buster:
             await self.queue_action(a)
         else:
             await self.write_to_file(f"Action {action} does not exist")
+
+
+    def thread_safe_write_to_file(self, data: str, print_to_console: bool = True):
+        asyncio.run_coroutine_threadsafe(self.write_to_file(data, print_to_console), self.buster_main_loop)
 
     async def write_to_file(self, data: str, print_to_console: bool = True):
         # Append timestamp to log
@@ -184,9 +193,9 @@ class Buster:
     # do not run multiple of these at the same time
     async def queue_action(self, action):
         async with self.action_lock:
-            print("Queued action")
+            await self.write_to_file("Queued action")
             self.action_queue.append(action)
-            print(self.action_queue)
+            # print(self.action_queue)
                 
     async def drop_item(self, item):
         tries = 0
@@ -268,7 +277,7 @@ class Buster:
     async def drop_primary(self):
         self.ensure_inventory_open = True
         await self.disable_mouse_and_keyboard()
-        print(f"Dropping primary {self.inventory_is_open} {self.ensure_inventory_open}")
+        await self.write_to_file(f"Dropping primary: {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.drop_item("PRIMARY")
         await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
@@ -277,6 +286,7 @@ class Buster:
     async def drop_secondary(self):
         self.ensure_inventory_open = True
         await self.disable_mouse_and_keyboard()
+        await self.write_to_file(f"Dropping secondary: {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.drop_item("SECONDARY")
         await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
@@ -285,6 +295,7 @@ class Buster:
     async def drop_pistol(self):
         self.ensure_inventory_open = True
         await self.disable_mouse_and_keyboard()
+        await self.write_to_file(f"Dropping pistol: {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.drop_item("PISTOL")
         await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
@@ -293,6 +304,7 @@ class Buster:
     async def drop_armor(self):
         self.ensure_inventory_open = True
         await self.disable_mouse_and_keyboard()
+        await self.write_to_file(f"Dropping armor: {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.drop_item("ARMOR")
         await self.enable_mouse_and_keyboard()
         self.ensure_inventory_open = False
@@ -301,6 +313,7 @@ class Buster:
     async def drop_all_weapons(self):
         self.ensure_inventory_open = True
         await self.disable_mouse_and_keyboard()
+        await self.write_to_file(f"Dropping all weapons: {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.drop_item("PISTOL")
         await self.drop_item("SECONDARY")
         await self.drop_item("PRIMARY")
@@ -316,6 +329,7 @@ class Buster:
     async def drop_rig(self):
         self.ensure_inventory_open = True
         await self.disable_mouse_and_keyboard()
+        await self.write_to_file(f"Dropping rig: {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.scroll_inventory()
         await self.drop_item("RIG")
         await self.enable_mouse_and_keyboard()
@@ -325,6 +339,7 @@ class Buster:
     async def drop_backpack(self):
         self.ensure_inventory_open = True
         await self.disable_mouse_and_keyboard()
+        await self.write_to_file(f"Dropping backpack: {self.inventory_is_open} {self.ensure_inventory_open}")
         await self.scroll_inventory()
         await self.drop_item("BACKPACK")
         await self.enable_mouse_and_keyboard()
@@ -336,6 +351,7 @@ class Buster:
         # win32api press v
         win32api.keybd_event(0x56, 0, 0, 0)
         await self.disable_mouse_and_keyboard()
+        await self.write_to_file(f"Dropping all wearable: {self.inventory_is_open} {self.ensure_inventory_open}")
         await asyncio.sleep(0.5)
         
         self.ensure_inventory_open = True
@@ -358,6 +374,7 @@ class Buster:
     async def walk_forward(self, duration=10):
         start_time = time.time()
         self.ensure_inventory_close = True
+        await self.write_to_file(f"walking forward")
         while time.time() - start_time < duration:
             await asyncio.sleep(0.001)
             if self.inventory_is_open:
@@ -369,6 +386,7 @@ class Buster:
             
     async def ensure_inventory_closed_5(self, duration=5):
         self.ensure_inventory_close = True
+        await self.write_to_file(f"ensuring inventory closed")
         await asyncio.sleep(duration)
         self.ensure_inventory_close = False
     
@@ -376,6 +394,7 @@ class Buster:
     async def ensure_inventory_open_5(self, duration=5):
         # Ensure inventory is open for 1 second
         self.ensure_inventory_open = True
+        await self.write_to_file(f"ensuring inventory open")
         await asyncio.sleep(duration)
         self.ensure_inventory_open = False
 
@@ -434,15 +453,17 @@ class Buster:
                         action = self.action_queue.pop(0)
                         await self.write_to_file(f"Popping action {action}")
                 
-                if action: 
-                    new_loop = asyncio.get_event_loop()
-                    await self.write_to_file(f"Executing action {action}")
-                    last_action = new_loop.create_task(action.execute())
+                    if action: 
+                        new_loop = asyncio.get_event_loop()
+                        await self.write_to_file(f"Executing action {action}")
+                        last_action = new_loop.create_task(action.execute())
                 await asyncio.sleep(0.05)
             except Exception as e:
                 # Log the current states
                 await self.write_to_file(f"Failed to execute action because {e}")
                 await self.write_to_file(f" Active: {self.active}, Tarkov Active: {self.tarkov_is_active}, Inventory: {self.inventory_is_open}, Ensure Open: {self.ensure_inventory_open}")
+        
+        await self.enable_mouse_and_keyboard()
         await self.write_to_file(f"Main loop ended")
                 
                 
@@ -453,9 +474,9 @@ class Buster:
             try:
                 self.tarkov_task_last_run = time.time()
                 # Log to file once every 5 seconds
-                if time.time() - last_log > 5:
+                if time.time() - last_log > 2:
                     last_log = time.time()
-                    await self.write_to_file(f"Tarkov checker is running, active: {self.active}, tarkov active: {self.tarkov_is_active}", print_to_console=False)
+                    await self.write_to_file(f"INFO: Tarkov checker is running, active: {self.active}, tarkov active: {self.tarkov_is_active}", print_to_console=False)
                     
                     
                 self.tarkov_is_active = pyautogui.getActiveWindowTitle() == "EscapeFromTarkov"
@@ -474,7 +495,7 @@ class Buster:
                 self.in_raid_task_last_run = time.time()
                 if time.time() - last_log > 5:
                     last_log = time.time()
-                    await self.write_to_file(f"In-raid checker is running, active: {self.active}, in raid: {self.in_raid}", print_to_console=False)
+                    await self.write_to_file(f"INFO: In-raid checker is running, active: {self.active}, in raid: {self.in_raid}", print_to_console=False)
                 
                 if self.tarkov_is_active:
                     self.in_raid = not (bool(pyautogui.locateOnScreen('slots/settings.png', region=LocationValues.SETTINGS, confidence=0.7)) or\
@@ -500,7 +521,7 @@ class Buster:
                 self.inventory_task_last_run = cur
                 if cur - last_log > 5:
                     last_log = time.time()
-                    await self.write_to_file(f"Inventory checker is running, active: {self.active}, inv open: {self.inventory_is_open}, ensure open: {self.ensure_inventory_open}, ensure closed: {self.ensure_inventory_close}", print_to_console=False)
+                    await self.write_to_file(f"INFO: Inventory checker is running, active: {self.active}, inv open: {self.inventory_is_open}, ensure open: {self.ensure_inventory_open}, ensure closed: {self.ensure_inventory_close}", print_to_console=False)
                 
                 if cur - last < 0.05:  
                     await asyncio.sleep(0.01 - (cur - last))
@@ -591,6 +612,7 @@ class Buster:
         f2 = asyncio.ensure_future(self.check_tarkov_task())
         f3 = asyncio.ensure_future(self.check_inv_task())
         f4 = asyncio.ensure_future(self.check_in_raid_task())
+        self.buster_main_loop = asyncio.get_event_loop()
         return [f1, f2, f3, f4]
                 
     def disable(self):
@@ -600,8 +622,9 @@ class Buster:
         self.active = True
         
     def stop(self):
-        self.running = False
         print("Stopping")
+        self.running = False
+        self.running = False
 
 
 
