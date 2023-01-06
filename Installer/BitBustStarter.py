@@ -27,15 +27,22 @@ data_template = {
 
 
 prices_template = {
-    "drop_primary":  1,
-    "drop_secondary":  2,
-    "drop_pistol":  3,
-    "drop_armor":  4,
-    "drop_all_weapons":  5,
-    "drop_all_wearable":  6,
+    "drop_primary": 1,
+    "drop_secondary": 2,
+    "drop_pistol": 3,
+    "drop_armor": 4,
+    "drop_all_weapons": 5,
+    "drop_all_wearable": 6,
     "drop_rig": 7,
     "drop_backpack": 8,
-    "rotate_5_sec": 9
+    "rotate_10_sec": 9,
+    "walk_forward_10_sec": 10,
+    "ensure_inventory_closed_5": 11,
+    "ensure_inventory_open_5": 12,
+    "shoot_sub": 13,
+    "shoot": 14,
+    "disable_mouse_10_sec": 15,
+    "disable_keyboard_10_sec": 16
 }
 
 

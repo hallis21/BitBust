@@ -202,7 +202,7 @@ class Buster:
         while not self.inventory_is_open and self.inventory_tab_is_open:
             await asyncio.sleep(0.05)
             tries += 1
-            if tries > 20:
+            if tries > 25:
                 await self.write_to_file(f"Failed to drop item {item} because inventory was not open")
                 return False
             
@@ -211,11 +211,11 @@ class Buster:
             tries = 0
             while not dropped: 
                 tries += 1
-                if tries > 10:
+                if tries > 25:
                     await self.write_to_file(f"Failed to drop item {item} because inventory was not open")
                     return False
                 
-                await asyncio.sleep(0.001)
+                await asyncio.sleep(0.1)
                 if not self.ensure_inventory_open: raise Exception("Inventory is not ensured") 
                 if not self.inventory_is_open or not self.inventory_tab_is_open: continue
                 loc = LocationValues.SLOT_ABSOLUTE_POSITIONS[item]          

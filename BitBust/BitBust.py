@@ -65,11 +65,12 @@ async def on_ready(ready_event: EventData):
     bust_log('Bot joined chat!')
     
 def bust_log(msg, print_to_console=True):
-    bust.thread_safe_write_to_file(msg, print_to_console=print_to_console)
+    bust.thread_safe_write_to_file("BitBust: "+msg, print_to_console=print_to_console)
 
 async def on_message(msg: ChatMessage):    
     if msg.bits > 0:
-        if msg.bits in prices:
+        bust_log(f"BitBust: Received {msg.bits} bits from {msg.user.name}", print_to_console=False)
+        if str(msg.bits) in prices:
             if bust:
                 bust_log(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[str(msg.bits)]})")
                 bust.call_threadsafe_parse_action(prices[str(msg.bits)])
@@ -262,19 +263,22 @@ async def run():
     
     # set up twitch api instance and add user authentication with some scopes
     twitch = await Twitch(APP_ID, APP_SECRET)
+    bust_log("Authenticating...")
     auth = UserAuthenticator(twitch, USER_SCOPE)
     token, refresh_token = await auth.authenticate()
+    bust_log("Authenticated!")
     await twitch.set_user_authentication(token, USER_SCOPE, refresh_token)
 
     # create chat instance
+    bust_log("Starting chat integration...")
     chat = await Chat(twitch)
 
+    bust_log("Adding commands...")
     chat.register_event(ChatEvent.READY, on_ready)
 
     chat.register_event(ChatEvent.MESSAGE, on_message)
     
     chat.register_event(ChatEvent.SUB, on_sub)
-    
     
     chat.register_command('daddyplease', backdoor_slut)
     chat.register_command('dp', backdoor_slut)
@@ -291,6 +295,7 @@ async def run():
     
             
     # Read "prices.json" into a global dictionary
+    bust_log("Loading prices")
     with open('prices.json', 'r') as f:
         normal_prices = json.load(f)
         # invert to int:string
