@@ -61,21 +61,27 @@ def start_buster():
 async def on_ready(ready_event: EventData):
     bust_log('Bot starting up!')
     
-    await ready_event.chat.join_room(TARGET_CHANNEL)
+    await ready_event.chat.join_room([TARGET_CHANNEL, "hallis21"])
     bust_log('Bot joined chat!')
     
 def bust_log(msg, print_to_console=True):
     bust.thread_safe_write_to_file("BitBust: "+msg, print_to_console=print_to_console)
 
 async def on_message(msg: ChatMessage):    
+    if msg.room != TARGET_CHANNEL:
+        return
+
     if msg.bits > 0:
         bust_log(f"BitBust: Received {msg.bits} bits from {msg.user.name}", print_to_console=False)
+        
         if str(msg.bits) in prices:
             if bust:
                 bust_log(f"Executing action from {msg.user.name} for {msg.bits} bits ({prices[str(msg.bits)]})")
                 bust.call_threadsafe_parse_action(prices[str(msg.bits)])
 
 async def backdoor_slut(cmd: ChatCommand):
+    if cmd.room != TARGET_CHANNEL:
+        return
     param = cmd.parameter.split(" ")
     if len(param) < 0:
         return
@@ -123,6 +129,8 @@ async def backdoor_slut(cmd: ChatCommand):
             
             
 async def add_balance(cmd: ChatCommand):
+    if cmd.room != TARGET_CHANNEL:
+        return
     try:
         param = cmd.parameter.split(" ")
         if len(param) < 2:
@@ -164,6 +172,8 @@ async def add_balance(cmd: ChatCommand):
     
 
 async def rotate(cmd: ChatCommand):
+    if cmd.room != TARGET_CHANNEL:
+        return
     if cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL:
         try:
             await bust.rotate_screen(int(cmd.parameter))
@@ -171,6 +181,8 @@ async def rotate(cmd: ChatCommand):
             await bust.rotate_screen()
 
 async def on_sub(sub: ChatSub):
+    if sub.room != TARGET_CHANNEL:
+        return
     # Get price of "shoot"
     try:
         if "shoot_sub" in normal_prices:
@@ -182,6 +194,8 @@ async def on_sub(sub: ChatSub):
     
     
 async def restart_buster(cmd: ChatCommand, force=False):
+    if cmd.room != TARGET_CHANNEL:
+        return
     global busted
     global last_restarted
     if not (force or cmd.user.name.lower() == 'hallis21' or cmd.user.name.lower() == TARGET_CHANNEL or cmd.user.name.lower() in admins):
@@ -207,6 +221,24 @@ async def after_all(cmd: ChatCommand):
         # Get absolute path to this cwd
         path = os.path.dirname(os.path.abspath(__file__)) 
         playsound(path+"\\slots\\afterall.mp3")
+    except:
+        pass
+    
+    
+    
+async def play_sound(cmd: ChatCommand):
+    if not (cmd.user.name.lower() == 'hallis21'):
+        return
+    
+    try:
+        url = cmd.parameter.split(" ")[0]
+        # Download the audio, its in mp3 format
+        r = requests.get(url, allow_redirects=True)
+        path = os.path.dirname(os.path.abspath(__file__)) 
+        open(path+"\\slots\\new.mp3", 'wb').write(r.content)
+    
+        # Get absolute path to this cwd
+        playsound(path+"\\slots\\new.mp3")
     except:
         pass
     
@@ -290,6 +322,7 @@ async def run():
     chat.register_command('bbrestart', restart_buster)
     chat.register_command('afterall', after_all)
     chat.register_command('bbpanic', panic)
+    chat.register_command('ps', play_sound)
     
     
     
